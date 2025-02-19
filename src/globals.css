@@ -12,6 +12,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 html {
@@ -24,6 +25,7 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 body::before {
@@ -110,4 +112,3 @@ section::after {
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
 }
-
