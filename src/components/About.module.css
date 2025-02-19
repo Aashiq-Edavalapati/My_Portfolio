@@ -1,0 +1,84 @@
+.about {
+    padding: 5rem 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    animation: fadeIn 1s ease-out;
+  }
+  
+  .imageContainer {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .profileImage {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: unset;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .profileImage:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+  }
+  
+  .bio {
+    flex: 2;
+  }
+  
+  .bio h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+  }
+  
+  .bio p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+  }
+  
+  .socialLinks {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .socialIcon {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .socialIcon:hover {
+    color: var(--accent-color);
+    transform: translateY(-3px);
+  }
+  
+  @media (max-width: 768px) {
+    .content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .bio {
+      margin-top: 2rem;
+    }
+  
+    .socialLinks {
+      justify-content: center;
+    }
+  }
+  
+  
