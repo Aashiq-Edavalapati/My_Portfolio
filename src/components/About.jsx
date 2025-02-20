@@ -21,14 +21,14 @@ const About = () => {
           🚀 Always open to collaborations, exciting projects, and discussions on emerging technologies. Let's build something amazing together!
           </p>
           <div className={styles.socialLinks}>
-            <a href="#" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
+            <a href="https://github.com/Aashiq-Edavalapati" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
               <i className="fab fa-github"></i>
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
+            <a href="https://www.linkedin.com/in/aashiq-edavalapati-77b346289/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
               <i className="fab fa-linkedin"></i>
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
-              <i className="fab fa-twitter"></i>
+            <a href="https://leetcode.com/u/Aashiq_Edavalapati/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
+              <i className="fas fa-code"></i>
             </a>
           </div>
         </div>
