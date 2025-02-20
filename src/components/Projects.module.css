@@ -1,0 +1,359 @@
+.projects {
+    padding: 5rem 0;
+    background-color: var(--bg-primary);
+  }
+  
+  .projectGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 1rem;
+    margin-bottom: 4rem;
+  }
+  
+  .projectCard {
+    background-color: rgba(10, 10, 31, 0.6);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .projectCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(110, 68, 255, 0.2);
+    border-color: rgba(110, 68, 255, 0.3);
+  }
+  
+  .projectImageContainer {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .projectImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .projectCard:hover .projectImage {
+    transform: scale(1.05);
+  }
+  
+  .projectInfo {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  .projectInfo h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #00ffff;
+    font-weight: 600;
+  }
+  
+  .projectDescription {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    font-size: 0.95rem;
+  }
+  
+  .projectTechnologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .techTag {
+    background-color: rgba(0, 255, 255, 0.1);
+    color: var(--text-secondary);
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+  }
+  
+  .techTag:hover {
+    background-color: rgba(0, 255, 255, 0.2);
+    border-color: rgba(0, 255, 255, 0.4);
+    transform: translateY(-2px);
+  }
+  
+  .projectLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: rgba(0, 255, 255, 0.1);
+    color: #00ffff;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    margin-top: auto;
+    width: fit-content;
+  }
+  
+  .projectLink:hover {
+    background-color: rgba(0, 255, 255, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  /* LeetCode Section Styles */
+  .leetcodeSection {
+    max-width: 1200px;
+    margin: 4rem auto 0;
+    padding: 2rem;
+    background-color: rgba(10, 10, 31, 0.6);
+    border-radius: 12px;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+  }
+  
+  .leetcodeTitle {
+    font-size: 2rem;
+    color: #00ffff;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .leetcodeBadges {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+  }
+  
+  .badgeContainer {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .leetcodeBadge {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .leetcodeStats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  
+  .statCard {
+    background-color: rgb(40, 40, 40);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .statCard:hover {
+    background-color: rgba(40, 40, 40,0.7);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .statIcon {
+    margin-bottom: 1rem;
+  }
+  
+  .statCard h4 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .statCard p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+  }
+  
+  .difficultyBreakdown {
+    margin-bottom: 3rem;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 255, 255, 0.1);
+  }
+  
+  .breakdownTitle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+  }
+  
+  .difficultyStats {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  
+  .difficultyStat {
+    display: grid;
+    grid-template-columns: 80px 60px 1fr;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+    background: rgb(40, 40, 40);
+    transition: all 0.3s ease;
+  }
+  
+  .difficultyStat:hover {
+    background: rgba(40, 40, 40, 0.7);
+    transform: translateX(5px);
+  }
+  
+  .difficultyLabel {
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .difficultyValue {
+    text-align: right;
+    font-family: monospace;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  
+  .barContainer {
+    position: relative;
+    height: 8px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .difficultyBar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: currentColor;
+    border-radius: 4px;
+    transition: width 1s ease-out;
+    box-shadow: 0 0 10px currentColor;
+    opacity: 0.7;
+  }
+  
+  /* Specific difficulty colors with hover effects */
+  .difficultyStat[data-difficulty="Easy"] {
+    border-left: 3px solid #00b8a3;
+  }
+  
+  .difficultyStat[data-difficulty="Medium"] {
+    border-left: 3px solid #ffc01e;
+  }
+  
+  .difficultyStat[data-difficulty="Hard"] {
+    border-left: 3px solid #ff375f;
+  }
+  
+  @media (max-width: 768px) {
+    .difficultyStat {
+      grid-template-columns: 70px 50px 1fr;
+      gap: 1rem;
+      padding: 0.5rem;
+    }
+    
+    .difficultyLabel {
+      font-size: 0.9rem;
+    }
+    
+    .difficultyValue {
+      font-size: 1rem;
+    }
+  }
+  
+  .consistencyGraph {
+    margin-top: 3rem;
+  }
+  
+  .graphTitle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+  }
+  
+  .graphContainer {
+    display: flex;
+    gap: 3px;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    justify-content: center;
+  }
+  
+  .graphWeek {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  
+  .graphDay {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    transition: all 0.2s ease;
+  }
+  
+  .graphLegend {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+  }
+  
+  .legendSquares {
+    display: flex;
+    gap: 3px;
+  }
+  
+  .legendSquare {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+  }
+  
+  @media (max-width: 768px) {
+    .projectGrid {
+      grid-template-columns: 1fr;
+    }
+  
+    .leetcodeStats {
+      grid-template-columns: 1fr;
+    }
+  
+    .graphContainer {
+      justify-content: flex-start;
+    }
+  }
