@@ -6,7 +6,6 @@ import Education from "./components/Education"
 import Certifications from "./components/Certifications"
 import Contact from "./components/Contact"
 import Footer from "./components/Footer"
-import Cursor from "./components/Cursor"
 import styles from "./App.module.css"
 
 function App() {
@@ -20,7 +19,6 @@ function App() {
       <Certifications />
       <Contact />
       <Footer />
-      <Cursor />
     </div>
   )
 }

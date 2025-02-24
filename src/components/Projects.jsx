@@ -18,8 +18,8 @@ const projects = [
   },
   {
     title: "Personal Portfolio",
-    description: "A collaborative task management platform with real-time updates and team collaboration features.",
-    technologies: ["React", "Firebase", "Material-UI", "Redux"],
+    description: "A personal portfolio website built using Vite, React to showcase my skills, projects, certifications, and achievements. It features a modern UI, smooth animations, and a responsive design. Deployed on Vercel for fast performance.",
+    technologies: ["React", "CSS"],
     image: portfolioPreview,
     github: "https://github.com/Aashiq-Edavalapati/My_Portfolio",
   },
