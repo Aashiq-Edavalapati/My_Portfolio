@@ -3,7 +3,6 @@
   color: var(--text-primary);
   line-height: 1.6;
   background-color: var(--bg-primary);
-  /* cursor: none; */
   position: relative;
   overflow-x: hidden;
 }

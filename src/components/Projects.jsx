@@ -6,6 +6,7 @@ import { Code2, Trophy, Target, Zap, ThumbsUp, Star, Award, Brain } from "lucide
 import styles from "./Projects.module.css";
 import portfolioPreview from '../assets/portfolioPreview.jpg';
 import luxeRidePreview from '../assets/luxeRidePreview.png';
+import agriChainPreview from '../assets/agriChainPreview.png';
 
 const projects = [
   {
@@ -26,10 +27,17 @@ const projects = [
   {
     title: "LuxeRide Rentals",
     description: "A modern and efficient Car Rental Website designed for seamless vehicle booking and management. This platform ensures a hassle-free experience for users looking to rent cars, with real-time availability, secure authentication, and an intuitive UI.",
-    technologies: ["HTML", "CSS", "JS", "Node.JS", "Electron"],
+    technologies: ["HTML", "CSS", "JS", "Node JS", "Electron"],
     image: luxeRidePreview,
     github: "https://github.com/Aashiq-Edavalapati/Car-Rental-Website",
   },
+  {
+    title: "AgriChain",
+    description: "AgriChain is a blockchain-powered platform that connects farmers and consumers directly, ensuring fair pricing, transparency, and sustainability in agriculture through smart contracts and AI-driven insights.",
+    technologies: ["Next JS", "Tailwind CSS", "Node JS", "Express", "Gemini API"],
+    image: agriChainPreview,
+    github: "https://github.com/tokenomists/AgriChain",
+  }
 ]
 
 const Projects = () => {
