@@ -1,8 +1,43 @@
-# React + Vite
+# 🌐 Aashiq Edavalapati - Portfolio Website  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **personal portfolio website** built with **Vite and React**, designed to showcase my **skills, projects, certifications, and achievements** with a modern and responsive UI.  
 
-Currently, two official plugins are available:
+## 🚀 Live Demo  
+🔗 [aashiqedavalapati.vercel.app](https://aashiqedavalapati.vercel.app/)  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features  
+- ⚡ **Blazing Fast** – Optimized with Vite for high performance  
+- 🎨 **Modern & Responsive UI** – Sleek and intuitive design  
+- 🖱️ **Interactive Custom Cursor** – Enhancing user experience  
+- 📂 **Projects Showcase** – Displaying featured work  
+- 🏆 **Skills & Certifications Section** – Highlighting technical expertise  
+- 🌍 **SEO & Accessibility Optimized** – Better visibility and reach  
+- 🚀 **Deployed on Vercel** – Ensuring smooth performance  
+
+## 🛠 Tech Stack  
+- **Frontend:** React, Vite, CSS Modules  
+- **Deployment:** Vercel  
+
+## 📌 Installation & Setup  
+To run this project locally, follow these steps:  
+
+```bash
+# Clone the repository
+git clone https://github.com/Aashiq-Edavalapati/My_Portfolio.git
+
+# Navigate to the project directory
+cd My_Portfolio
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
+
+💡 Interested in my work? Feel free to explore my repositories and see what I’m building.<br>
+📩 Let’s connect and discuss exciting opportunities!
+
+  <h2>👨‍💻 Developed by Aashiq Edavalapati</h2>
+🔗 LinkedIn: linkedin.com/in/aashiq-edavalapati<br>
+📂 GitHub: github.com/Aashiq-Edavalapati
