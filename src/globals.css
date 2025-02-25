@@ -110,16 +110,11 @@ section::after {
   background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
 }
 
-/* Add these styles to your Education.module.css file */
-
-/* Custom scrollbar for the modal content */
 .modalContent {
-  /* Keep your existing styles */
   scrollbar-width: thin;
   scrollbar-color: #00ffff rgba(0, 255, 255, 0.1);
 }
 
-/* For Webkit browsers (Chrome, Safari, newer Edge) */
 .modalContent::-webkit-scrollbar {
   width: 8px;
 }
@@ -141,12 +136,10 @@ section::after {
   box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
 }
 
-/* Hide the scrollbar buttons */
 .modalContent::-webkit-scrollbar-button {
   display: none;
 }
 
-/* Custom scrollbar for the entire page */
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -168,12 +161,10 @@ section::after {
   box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
 }
 
-/* Hide the scrollbar buttons */
 ::-webkit-scrollbar-button {
   display: none;
 }
 
-/* Firefox custom scrollbar */
 * {
   scrollbar-width: thin;
   scrollbar-color: #00ffff rgba(0, 0, 0, 0.3);
