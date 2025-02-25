@@ -1,6 +1,6 @@
 :root {
-  --bg-primary: #0a0a1f;
-  --bg-secondary: #1e1e3f;
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #1a1a1a;
   --text-primary: #ffffff;
   --text-secondary: #b8b8b8;
   --accent-color: #00ffff;
@@ -108,4 +108,73 @@ section::after {
   right: 0;
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+}
+
+/* Add these styles to your Education.module.css file */
+
+/* Custom scrollbar for the modal content */
+.modalContent {
+  /* Keep your existing styles */
+  scrollbar-width: thin;
+  scrollbar-color: #00ffff rgba(0, 255, 255, 0.1);
+}
+
+/* For Webkit browsers (Chrome, Safari, newer Edge) */
+.modalContent::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modalContent::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  margin: 5px 0;
+}
+
+.modalContent::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #00ffff, #0088ff);
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.modalContent::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #00ffff, #00ccff);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+/* Hide the scrollbar buttons */
+.modalContent::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* Custom scrollbar for the entire page */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin: 5px 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #00ffff, #0088ff);
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #00ffff, #00ccff);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+}
+
+/* Hide the scrollbar buttons */
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* Firefox custom scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #00ffff rgba(0, 0, 0, 0.3);
 }

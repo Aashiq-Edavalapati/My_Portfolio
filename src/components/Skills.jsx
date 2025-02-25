@@ -22,6 +22,7 @@ import bashLogo from "../assets/bash.png"
 import shellLogo from "../assets/shell.png"
 import mysqlLogo from "../assets/mysql.png"
 import numpyLogo from "../assets/numpy.png"
+import nextLogo from '../assets/next.png'
 
 
 const skillCategories = [
@@ -42,9 +43,10 @@ const skillCategories = [
     skills: [
       { name: "HTML", logo: htmlLogo },
       { name: "CSS", logo: cssLogo },
-      { name: "React", logo: reactLogo },
-      { name: "Express.js", logo: expressLogo },
-      { name: "Node.js", logo: nodeLogo },
+      { name: "React JS", logo: reactLogo },
+      { name: "Next JS", logo: nextLogo },
+      { name: "Express JS", logo: expressLogo },
+      { name: "Node JS", logo: nodeLogo },
     ],
   },
   {
