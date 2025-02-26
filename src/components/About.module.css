@@ -182,21 +182,24 @@
   0% { left: -100%; }
   100% { left: 100%; }
 }
-/* Rocket emoji animation */
+
 .bio p:last-of-type .emoji {
   display: inline-block;
   animation: rocket 2s ease-in-out infinite;
   transform-origin: center;
 }
+
 @keyframes rocket {
   0%, 100% { transform: translateY(0) rotate(0deg); }
   50% { transform: translateY(-5px) rotate(5deg); }
 }
+
 .socialLinks {
   display: flex;
   gap: 1.5rem;
   margin-top: 2.5rem;
 }
+
 .socialIcon {
   font-size: 1.5rem;
   color: var(--text-secondary);
@@ -215,7 +218,7 @@
   position: relative;
   overflow: hidden;
 }
-/* Social icon ripple effect */
+
 .socialIcon::after {
   content: '';
   position: absolute;
@@ -228,21 +231,23 @@
   transform: translate(-50%, -50%);
   opacity: 0;
 }
+
 .socialIcon:hover::after {
   width: 150%;
   height: 150%;
   opacity: 1;
   transition: all 0.6s ease-out;
 }
+
 .socialIcon:hover {
   color: white;
-  background: linear-gradient(135deg, var(--accent-color), var(--accent-color-dark, #0077cc));
-  transform: translateY(-8px) scale(1.1);
+  background-color: var(--accent-color);
+  transform: translateY(-5px) rotate(8deg);
   box-shadow: 
     0 10px 20px rgba(var(--accent-color-rgb, 0, 200, 255), 0.3),
     inset 0 0 0 1px rgba(255, 255, 255, 0.4);
 }
-/* Add subtle skill badges */
+
 .skillBadges {
   display: flex;
   flex-wrap: wrap;
