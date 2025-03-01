@@ -1,69 +1,523 @@
 .skills {
-    padding: 5rem 0;
-    background-color: var(--bg-primary);
+  padding: 5rem 0;
+  background-color: var(--bg-primary);
+}
+.skillCategories {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.category {
+  animation: fadeIn 1s ease-out;
+}
+.categoryTitle {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.skillGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+.skillItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--bg-secondary);
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.skillItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2);
+}
+.skillLogo {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 0.5rem;
+}
+.skillName {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+/* Modal Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(3px);
+  animation: fadeIn 0.3s ease-out;
+}
+.modalContent {
+  background-color: var(--bg-primary);
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+  animation: slideUp 0.4s ease-out;
+}
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+.modalTitleContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.modalLogo {
+  width: 40px;
+  height: 40px;
+}
+.modalTitle {
+  margin: 0;
+  color: var(--accent-color);
+  font-size: 1.8rem;
+}
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: color 0.2s;
+}
+.closeButton:hover {
+  color: var(--accent-color);
+}
+.modalDescription {
+  padding: 1.5rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  border-bottom: 1px solid var(--border-color);
+}
+.modalTabs {
+  display: flex;
+  border-bottom: 1px solid var(--border-color);
+  overflow-x: auto;
+}
+.tabButton {
+  padding: 1rem 1.5rem;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+.tabButton:hover {
+  background-color: rgba(0, 255, 255, 0.05);
+}
+.activeTab {
+  color: var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+  font-weight: bold;
+}
+.tabContent {
+  padding: 2rem;
+}
+/* Demo Tab */
+.demoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.codeContainer {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  padding: 1rem;
+  overflow-x: auto;
+  position: relative;
+}
+.codeSnippet {
+  margin: 0;
+  color: #d4d4d4;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.runButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: var(--accent-color);
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+.runButton:hover {
+  background-color: #00ffff;
+  transform: translateY(-2px);
+}
+.runButton:active {
+  transform: translateY(0);
+}
+.runButton:disabled {
+  background-color: #4a4a4a;
+  color: #7a7a7a;
+  cursor: not-allowed;
+  transform: none;
+}
+.compilingContainer {
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  padding: 1rem;
+  animation: fadeIn 0.3s ease-out;
+}
+.compilingStatus {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+.compilingText {
+  color: var(--text-secondary);
+}
+.compilingPercentage {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+.progressBarOuter {
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.progressBarInner {
+  height: 100%;
+  background-color: var(--accent-color);
+  border-radius: 5px;
+  transition: width 0.1s ease-out;
+}
+.outputContainer {
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  padding: 1rem;
+  animation: fadeIn 0.3s ease-out;
+}
+.outputContainer h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--accent-color);
+}
+.codeOutput {
+  font-family: 'Consolas', monospace;
+  color: var(--text-primary);
+  padding: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.placeholderDemo {
+  background-color: var(--bg-secondary);
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.placeholderDemo .runButton {
+  position: relative;
+  top: 0;
+  right: 0;
+}
+/* Projects Tab */
+.projectsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.projectCard {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+.projectCard:hover {
+  transform: translateY(-3px);
+}
+.projectImage {
+  width: 120px;
+  height: 80px;
+  border-radius: 4px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.projectImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.projectInfo {
+  flex: 1;
+}
+.projectInfo h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--accent-color);
+}
+.projectInfo p {
+  margin: 0 0 0.5rem;
+  color: var(--text-secondary);
+}
+.projectLink {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+.projectLink:hover {
+  text-decoration: underline;
+}
+/* Certifications Tab */
+.certificationsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.certificationCard {
+  flex: 1;
+  min-width: 200px;
+  padding: 1.5rem;
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+.certificationCard h4 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+.certificationCard p {
+  margin: 0.5rem 0;
+  color: var(--text-secondary);
+}
+.certLink {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--accent-color);
+  text-decoration: none;
+}
+.certLink:hover {
+  text-decoration: underline;
+}
+.experienceLevelCard {
+  width: 100%;
+  padding: 2rem;
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  text-align: center;
+}
+.experienceLevelCard h4 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: var(--accent-color);
+}
+.experienceMeter {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+}
+.experienceLevel {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+.beginner {
+  background-color: #3498db;
+  width: 33%;
+}
+.intermediate {
+  background-color: #2ecc71;
+  width: 66%;
+}
+.advanced {
+  background-color: #f39c12;
+  width: 100%;
+}
+/* Use Cases Tab (Replaced Timeline) */
+.useCasesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.strengthMeterContainer {
+  background-color: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+}
+.strengthMeterContainer h4 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: var(--accent-color);
+}
+.strengthBar {
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin: 0 auto 1.5rem;
+  position: relative;
+}
+.strengthFill {
+  height: 100%;
+  background: linear-gradient(90deg, #00ffff 0%, #00ffaa 100%);
+  border-radius: 5px;
+  transition: width 1s ease-out;
+}
+.strengthMarker {
+  position: absolute;
+  bottom: -25px;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+.useCasesTitle {
+  color: var(--accent-color);
+  text-align: center;
+  margin: 1rem 0;
+}
+.useCaseGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+.useCaseCard {
+  background-color: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+.useCaseCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.1);
+}
+.useCaseIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.useCaseName {
+  color: var(--accent-color);
+  margin: 0 0 0.5rem;
+}
+.useCaseDescription {
+  color: var(--text-secondary);
+  margin: 0;
+  font-size: 0.9rem;
+}
+.emptyState {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-secondary);
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+}
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  .skillCategories {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
+  to {
+    opacity: 1;
   }
-  
-  .category {
-    animation: fadeIn 1s ease-out;
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
   }
-  
-  .categoryTitle {
-    font-size: 1.5rem;
-    color: var(--accent-color);
-    margin-bottom: 1rem;
-    text-align: center;
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
   .skillGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 1.5rem;
-    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
   }
   
-  .skillItem {
-    display: flex;
+  .modalContent {
+    width: 95%;
+  }
+  
+  .projectCard {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 1rem;
-    background-color: var(--bg-secondary);
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
-  .skillItem:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2);
+  .projectImage {
+    width: 100%;
+    height: 120px;
   }
   
-  .skillLogo {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 0.5rem;
+  .useCaseGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .skillGrid {
+    grid-template-columns: repeat(2, 1fr);
   }
   
-  .skillName {
+  .modalTabs {
+    justify-content: flex-start;
+  }
+  
+  .tabButton {
+    padding: 0.75rem 1rem;
     font-size: 0.9rem;
-    color: var(--text-secondary);
   }
   
-  @media (max-width: 768px) {
-    .skillGrid {
-      grid-template-columns: repeat(3, 1fr);
-    }
+  .certificationsContainer {
+    flex-direction: column;
   }
   
-  @media (max-width: 480px) {
-    .skillGrid {
-      grid-template-columns: repeat(2, 1fr);
-    }
+  .useCaseGrid {
+    grid-template-columns: 1fr;
   }
   
+  .runButton {
+    position: relative;
+    display: block;
+    margin-top: 1rem;
+    width: 100%;
+  }
   
+  .codeContainer .runButton {
+    position: relative;
+    right: auto;
+    top: auto;
+    margin-top: 1rem;
+    width: 100%;
+  }
+}
