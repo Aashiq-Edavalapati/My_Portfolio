@@ -1,0 +1,232 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .headerContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .scrolled {
+    padding: 0.75rem 2rem;
+    background-color: rgba(10, 10, 10, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .logoContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary, #ffffff);
+    text-decoration: none;
+  }
+  
+  .logoAccent {
+    color: var(--accent-color, #00ffff);
+  }
+  
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+  }
+  
+  .navList {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+  }
+  
+  .navItem {
+    margin: 0 0.75rem;
+  }
+  
+  .navLink {
+    color: var(--text-secondary, #cccccc);
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .navLink:hover,
+  .navLink.active {
+    color: var(--accent-color, #00ffff);
+    background-color: rgba(0, 255, 255, 0.1);
+  }
+  
+  .resumeButton {
+    background-color: var(--accent-color, #00ffff);
+    color: var(--bg-primary, #121212);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .resumeButton:hover {
+    background-color: var(--accent-color-dark, #00d4d4);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 255, 255, 0.3);
+    color: var(--bg-primary, #121212);
+  }
+  
+  .resumeButton:active {
+    transform: translateY(0);
+  }
+  
+  .mobileMenuToggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+  }
+  
+  .mobileMenuToggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--text-primary, #ffffff);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+  
+  .mobileMenuToggle.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  
+  .mobileMenuToggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .mobileMenuToggle.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+  
+  @media (max-width: 992px) {
+    .navItem {
+      margin: 0 0.5rem;
+    }
+    
+    .navLink {
+      padding: 0.5rem 0.75rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      padding: 1rem;
+    }
+    
+    .scrolled {
+      padding: 0.75rem 1rem;
+    }
+    
+    .headerContainer {
+      position: relative;
+    }
+    
+    .mobileMenuToggle {
+      display: flex;
+      order: 3;
+      margin-left: 1rem;
+    }
+    
+    .nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 70%;
+      height: 100vh;
+      background-color: var(--bg-primary, #121212);
+      flex-direction: column;
+      justify-content: center;
+      margin: 0;
+      transition: all 0.3s ease;
+      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      z-index: 1000;
+    }
+    
+    .navOpen {
+      right: 0;
+    }
+    
+    .navList {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    
+    .navItem {
+      margin: 0.8rem 0;
+      width: 100%;
+      text-align: center;
+    }
+    
+    .navLink {
+      display: block;
+      padding: 0.8rem 1rem;
+      width: 100%;
+    }
+    
+    .navLink:hover,
+    .navLink.active {
+      color: var(--accent-color, #00ffff);
+      background-color: rgba(0, 255, 255, 0.1);
+    }
+    
+    .resumeButton {
+      order: 2;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo {
+      font-size: 1.3rem;
+    }
+    
+    .resumeButton {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.9rem;
+    }
+    
+    .nav {
+      width: 85%;
+    }
+  }
