@@ -1,0 +1,495 @@
+.education {
+    padding: 5rem 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+  }
+  
+  .timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+  
+  .timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #00ffff, transparent);
+    transform: translateX(-50%);
+  }
+  
+  .timelineItem {
+    position: relative;
+    margin-bottom: 3rem;
+    width: 50%;
+    animation: fadeIn 1s ease-out;
+    cursor: pointer;
+  }
+  
+  .timelineItem:nth-child(odd) {
+    left: 0;
+    padding-right: 2rem;
+  }
+  
+  .timelineItem:nth-child(even) {
+    left: 50%;
+    padding-left: 2rem;
+  }
+  
+  .timelineItem::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    border: 3px solid #00ffff;
+    border-radius: 50%;
+    top: 15px;
+  }
+  
+  .timelineItem:nth-child(odd)::after {
+    right: -10px;
+  }
+  
+  .timelineItem:nth-child(even)::after {
+    left: -10px;
+  }
+  
+  .timelineContent {
+    background: linear-gradient(145deg, rgba(0, 0, 0, 0.8), rgba(10, 30, 50, 0.8));
+    padding: 1.8rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    border-left: 3px solid #00ffff;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .timelineContent::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top right, rgba(0, 255, 255, 0.2), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .timelineContent:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.4);
+  }
+  
+  .timelineContent:hover::before {
+    opacity: 1;
+  }
+  
+  .timelineContent h3 {
+    font-size: 1.5rem;
+    color: #00ffff;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  }
+  
+  .timelineContent h4 {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .timelineContent p {
+    color: var(--text-secondary);
+  }
+  
+  .years {
+    display: inline-block;
+    color: #00ffff;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    padding: 0.3rem 0.8rem;
+    background-color: rgba(0, 255, 255, 0.1);
+    border-radius: 4px;
+    font-weight: 500;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 1rem;
+    overflow-y: auto;
+    backdrop-filter: blur(8px);
+  }
+  
+  .modalContent {
+    background: linear-gradient(135deg, #0a0a1f, #0f1a2a);
+    border-radius: 12px;
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    animation: modalFadeIn 0.3s ease-out;
+    max-height: 90vh;
+    overflow-y: auto;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+  }
+  
+  .closeButton {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .closeButton:hover {
+    color: #00ffff;
+    transform: rotate(90deg);
+    background: rgba(0, 255, 255, 0.1);
+  }
+  
+  .modalGrid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2.5rem;
+  }
+  
+  .institutionInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    box-shadow: inset 0 0 15px rgba(0, 255, 255, 0.1);
+    border: 1px solid rgba(0, 255, 255, 0.1);
+  }
+  
+  .institutionIcon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    overflow: hidden;
+  }
+  
+  .institutionIcon img {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .institutionInfo h2 {
+    font-size: 1.8rem;
+    color: #00ffff;
+    margin-bottom: 0.8rem;
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  }
+  
+  .educationDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .section {
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+    padding: 1.2rem;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 255, 255, 0.1);
+  }
+  
+  .section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.1);
+    background: rgba(0, 255, 255, 0.05);
+  }
+  
+  .section h3 {
+    font-size: 1.3rem;
+    color: #00ffff;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .section h3::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #00ffff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00ffff;
+  }
+  
+  .cgpa {
+    color: #00ffbb;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 0.5rem 1rem;
+    background: rgba(0, 255, 187, 0.1);
+    display: inline-block;
+    border-radius: 6px;
+  }
+  
+  .percentile {
+    color: #00bbff;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 0.5rem 1rem;
+    background: rgba(0, 187, 255, 0.1);
+    display: inline-block;
+    border-radius: 6px;
+  }
+  
+  .semesterSection {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 1rem;
+    border: 1px solid rgba(0, 255, 255, 0.1);
+  }
+  
+  .semesterToggle {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3);
+    border: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+  }
+  
+  .semesterToggle:hover {
+    background-color: rgba(0, 255, 255, 0.1);
+    color: #00ffff;
+  }
+  
+  .semesterList {
+    padding: 1rem 1.5rem;
+  }
+  
+  .semesterItem {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 0;
+    color: var(--text-secondary);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .semesterItem:last-child {
+    border-bottom: none;
+  }
+  
+  .semesterItem span:last-child {
+    font-weight: 600;
+    color: #00ffff;
+  }
+  
+  .accomplishmentsList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .accomplishmentsList li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 215, 0, 0.05);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+  
+  .accomplishmentsList li:hover {
+    transform: translateX(5px);
+    background: rgba(255, 215, 0, 0.1);
+  }
+  
+  .trophyIcon {
+    color: #ffd700;
+    min-width: 20px;
+    filter: drop-shadow(0 0 3px rgba(255, 215, 0, 0.5));
+  }
+  
+  .clubsSection {
+    background: linear-gradient(145deg, rgba(0, 255, 255, 0.08), rgba(0, 170, 255, 0.04));
+    border-radius: 10px;
+    padding: 1.5rem;
+    border: 1px solid rgba(0, 255, 255, 0.15);
+    transition: all 0.3s ease;
+  }
+  
+  .clubsSection:hover {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
+    transform: translateY(-5px);
+  }
+  
+  .clubsList {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .clubsList li {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    border-left: 3px solid #00ffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .clubsList li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, #00ffff, #0088ff);
+    opacity: 0.8;
+  }
+  
+  .clubsList li::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(0, 255, 255, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .clubsList li:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    color: #00ffff;
+  }
+  
+  .clubsList li:hover::after {
+    opacity: 1;
+  }
+  
+  @keyframes modalFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes pulseGlow {
+    0% { box-shadow: 0 0 5px rgba(0, 255, 255, 0.3); }
+    50% { box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); }
+    100% { box-shadow: 0 0 5px rgba(0, 255, 255, 0.3); }
+  }
+  
+  @media (max-width: 768px) {
+    .timeline::before {
+      left: 20px;
+    }
+  
+    .timelineItem {
+      width: 100%;
+      padding-left: 50px;
+      padding-right: 0;
+      left: 0;
+    }
+  
+    .timelineItem:nth-child(even) {
+      left: 0;
+      padding-left: 50px;
+    }
+  
+    .timelineItem::after {
+      left: 11px;
+    }
+  
+    .timelineItem:nth-child(odd)::after {
+      right: auto;
+      left: 11px;
+    }
+  
+    .modalContent {
+      margin: 1rem;
+      padding: 1.5rem;
+    }
+  
+    .modalGrid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  
+    .institutionInfo {
+      margin-bottom: 1rem;
+      padding: 1.5rem 1rem;
+    }
+  
+    .section {
+      padding: 1rem;
+    }
+  
+    .clubsList {
+      grid-template-columns: 1fr;
+    }
+  }
