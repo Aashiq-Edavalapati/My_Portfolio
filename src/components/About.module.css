@@ -269,13 +269,14 @@
   transform: translateY(-3px);
   box-shadow: 0 5px 10px rgba(var(--accent-color-rgb, 0, 200, 255), 0.2);
 }
-/* Responsive styles */
+
 @media (max-width: 992px) {
   .content {
     gap: 3rem;
   }
   
   .profileImage {
+    margin-top: 6rem;
     width: 280px;
     height: 280px;
   }
