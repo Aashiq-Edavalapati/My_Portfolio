@@ -138,7 +138,7 @@
     transform: translateY(-9px) rotate(-45deg);
   }
   
-  @media (max-width: 992px) {
+  /* @media (max-width: 992px) {
     .navItem {
       margin: 0 0.5rem;
     }
@@ -214,9 +214,77 @@
     .resumeButton {
       order: 2;
     }
+  } */
+   
+  @media (min-width: 768px) and (max-width: 992px) {
+    .header {
+      padding: 1rem;
+    }
+  
+    .headerContainer {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .mobileMenuToggle {
+      display: flex;
+      order: 3;
+      margin-left: 1rem;
+    }
+  
+    .nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 70%;
+      height: 100vh;
+      background-color: var(--bg-primary, #121212);
+      flex-direction: column;
+      justify-content: center;
+      margin: 0;
+      transition: all 0.3s ease;
+      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      z-index: 1000;
+    }
+  
+    .navOpen {
+      right: 0;
+    }
+  
+    .navList {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+  
+    .navItem {
+      margin: 0.8rem 0;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .navLink {
+      display: block;
+      padding: 0.8rem 1rem;
+      width: 100%;
+    }
+  
+    .resumeButton {
+      order: 2;
+      align-self: center;
+      margin-bottom: 1rem;
+    }
+  
+    /* Add some spacing to prevent content from going under navbar */
+    body {
+      padding-top: 80px;
+    }
   }
   
-  @media (max-width: 480px) {
+  @media (max-width: 541px) {
     .logo {
       font-size: 1.3rem;
     }

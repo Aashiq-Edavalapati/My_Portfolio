@@ -34,7 +34,7 @@ const Header = ({ activeSection }) => {
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.headerContainer}>
         <div className={styles.logoContainer}>
-          <a href="#home" className={styles.logo}>
+          <a href="#" className={styles.logo}>
             <span className={styles.logoAccent}>P</span>ortfolio
           </a>
         </div>

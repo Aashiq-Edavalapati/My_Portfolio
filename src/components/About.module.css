@@ -328,6 +328,7 @@
   }
   
   .bio h3 {
+    margin-top: -70px;
     font-size: 2rem;
   }
   
@@ -335,12 +336,12 @@
     font-size: 1rem;
   }
 }
-/* Animation keyframes */
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
-/* Dark mode enhancements */
+
 @media (prefers-color-scheme: dark) {
   .profileImage {
     box-shadow: 
