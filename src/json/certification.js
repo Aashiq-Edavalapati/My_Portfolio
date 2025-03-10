@@ -1,14 +1,14 @@
 import google_cys from "../assets/certifications/google-cys.png"
-// import hackerrank_problem_solving from "../assets/certifications/hackerrank-problem-solving.png"
-// import hackerrank_java from "../assets/certifications/hackerrank-java.png"
-// import hackerrank_python from "../assets/certifications/hackerrank-python.png"
-// import google_foundations from "../assets/certifications/google-foundations.png"
-// import google_play_safe from "../assets/certifications/google-play-safe.png"
-// import google_networks from "../assets/certifications/google-networks.png"
-// import google_linux_sql from "../assets/certifications/google-linux-sql.png"
-// import google_assets from "../assets/certifications/google-assets.png"
-// import google_detection from "../assets/certifications/google-detection.png"
-// import google_python from "../assets/certifications/google-python.png"
+import hackerrank_problem_solving from "../assets/certifications/hackerrank-problem-solving.png"
+import hackerrank_java from "../assets/certifications/hackerrank-java.png"
+import hackerrank_python from "../assets/certifications/hackerrank-python.png"
+import google_foundations from "../assets/certifications/google-foundations.png"
+import google_play_safe from "../assets/certifications/google-play-safe.png"
+import google_networks from "../assets/certifications/google-networks.png"
+import google_linux_sql from "../assets/certifications/google-linux-sql.png"
+import google_assets from "../assets/certifications/google-assets.png"
+import google_detection from "../assets/certifications/google-detection.png"
+import google_python from "../assets/certifications/google-python.png"
 
 const certificationsData = {
   "certifications": [
@@ -104,7 +104,7 @@ const certificationsData = {
       "expiryDate": null,
       "credentialId": "F65A6AE72B1F",
       "credentialURL": "https://www.hackerrank.com/certificates/f65a6ae72b1f",
-      "image": "hackerrank_problem_solving",
+      "image": hackerrank_problem_solving,
       "description": "It covers basic topics of Data Structures (such as Arrays, Strings) and Algorithms (such as Sorting and Searching).",
       "skills": [
         "Problem Solving",
@@ -123,7 +123,7 @@ const certificationsData = {
       "expiryDate": "",
       "credentialId": "F915BBDCC5C1",
       "credentialURL": "https://www.hackerrank.com/certificates/f915bbdcc5c1",
-      "image": "hackerrank_java",
+      "image": hackerrank_java,
       "description": "It covers basic topics in Java language such as classes, data structures, inheritance, exception handling, etc. You are expected to be proficient in either Java 7 or Java 8.",
       "skills": [
         "Java",
@@ -142,7 +142,7 @@ const certificationsData = {
       "expiryDate": "",
       "credentialId": "E4DF4974AA3D",
       "credentialURL": "https://www.hackerrank.com/certificates/e4df4974aa3d",
-      "image": "hackerrank_python",
+      "image": hackerrank_python,
       "description": "It covers topics like Scalar Types, Operators and Control Flow, Strings, Collections and Iteration, Modularity, Objects and Types and Classes",
       "skills": [
         "Python",
@@ -161,7 +161,7 @@ const certificationsData = {
       "expiryDate": "",
       "credentialId": "DWKY58YDBPRV",
       "credentialURL": "https://www.coursera.org/account/accomplishments/verify/DWKY58YDBPRV",
-      "image": "google_foundations",
+      "image": google_foundations,
       "description": "Introduction to the field of cybersecurity, including core concepts, terminology, and frameworks essential for information security professionals.",
       "skills": [
         "Cybersecurity",
@@ -180,7 +180,7 @@ const certificationsData = {
       "expiryDate": "",
       "credentialId": "8BSQMNCU8J8S",
       "credentialURL": "https://www.coursera.org/account/accomplishments/verify/8BSQMNCU8J8S",
-      "image": "google_play_safe",
+      "image": google_play_safe,
       "description": "Comprehensive course on risk management in cybersecurity contexts, focusing on frameworks and practical approaches to mitigating security risks.",
       "skills": [
         "Information Security (INFOSEC)",
@@ -199,7 +199,7 @@ const certificationsData = {
       "expiryDate": "",
       "credentialId": "VRA37LPRAVC4",
       "credentialURL": "https://www.coursera.org/account/accomplishments/verify/VRA37LPRAVC4",
-      "image": "google_networks",
+      "image": google_networks,
       "description": "Detailed exploration of network concepts, protocols, and security measures essential for protecting organizational infrastructure.",
       "skills": [
         "Security Hardening",
@@ -218,7 +218,7 @@ const certificationsData = {
       "expiryDate": "",
       "credentialId": "VZVUEM8LEZ36",
       "credentialURL": "https://www.coursera.org/account/accomplishments/verify/VZVUEM8LEZ36",
-      "image": "google_linux_sql",
+      "image": google_linux_sql,
       "description": "Hands-on training with essential cybersecurity tools including Linux operating system and SQL database queries for security analysis.",
       "skills": [
         "Command line interface (CLI)",
@@ -236,7 +236,7 @@ const certificationsData = {
       "expiryDate": "",
       "credentialId": "8Y9A9D9XNQ3S",
       "credentialURL": "https://www.coursera.org/account/accomplishments/verify/8Y9A9D9XNQ3S",
-      "image": "google_assets",
+      "image": google_assets,
       "description": "In-depth study of identifying, classifying, and managing organizational assets, threats, and vulnerabilities in cybersecurity contexts.",
       "skills": [
         "Authentication",
@@ -255,7 +255,7 @@ const certificationsData = {
       "expiryDate": "",
       "credentialId": "PP5W2662VJN9",
       "credentialURL": "https://www.coursera.org/account/accomplishments/verify/PP5W2662VJN9",
-      "image": "google_detection",
+      "image": google_detection,
       "description": "Focused training on security monitoring, incident detection, and response procedures using industry-standard tools and best practices.",
       "skills": [
         "Security Information and Event Management (SIEM) tools",
@@ -274,7 +274,7 @@ const certificationsData = {
       "expiryDate": "",
       "credentialId": "P9J7AK5AX276",
       "credentialURL": "https://www.coursera.org/account/accomplishments/verify/P9J7AK5AX276",
-      "image": "google_python",
+      "image": google_python,
       "description": "Advanced course on applying Python programming to automate common cybersecurity tasks and improve operational efficiency.",
       "skills": [
         "Computer Programming",
