@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import styles from './certifications.module.css';
+import styles from './Certifications.module.css';
 import certificationsData from '../json/certification';
 
 const Certifications = () => {
