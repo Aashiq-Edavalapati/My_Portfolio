@@ -35,7 +35,7 @@ const Header = ({ activeSection }) => {
       <div className={styles.headerContainer}>
         <div className={styles.logoContainer}>
           <a href="#" className={styles.logo}>
-            <span className={styles.logoAccent}>P</span>ortfolio
+            <span className={styles.logoAccent}>Aa</span>shiq
           </a>
         </div>
         
