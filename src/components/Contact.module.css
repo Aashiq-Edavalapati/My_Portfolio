@@ -1,0 +1,307 @@
+.contact {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, var(--bg-primary) 0%, #111418 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .contact::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at 10% 20%, rgba(var(--accent-rgb), 0.03) 0%, transparent 60%),
+                      radial-gradient(circle at 90% 80%, rgba(var(--accent-rgb), 0.04) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  
+  .contactForm {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 2.5rem;
+    background: rgba(var(--bg-secondary-rgb), 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 
+                0 1px 2px rgba(var(--accent-rgb), 0.15),
+                0 -1px 2px rgba(255, 255, 255, 0.05) inset;
+    border: 1px solid rgba(var(--accent-rgb), 0.1);
+    animation: slideUp 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  
+  .formGroup {
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  .formGroup label {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    letter-spacing: 0.3px;
+    font-size: 0.95rem;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+  }
+  
+  .formGroup input,
+  .formGroup textarea {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    background-color: rgba(var(--bg-secondary-rgb), 0.8);
+    border: 1px solid rgba(var(--text-secondary-rgb), 0.3);
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+  }
+  
+  .formGroup input:focus,
+  .formGroup textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(var(--accent-rgb), 0.2);
+    background-color: rgba(var(--bg-secondary-rgb), 0.9);
+  }
+  
+  .formGroup textarea {
+    height: 180px;
+    resize: vertical;
+    line-height: 1.6;
+  }
+  
+  /* Floating label effect */
+  .floatingLabel {
+    position: relative;
+  }
+  
+  .floatingLabel label {
+    position: absolute;
+    top: 1rem;
+    left: 1.25rem;
+    margin: 0;
+    padding: 0 0.25rem;
+    pointer-events: none;
+    transition: all 0.2s ease;
+    opacity: 0.8;
+    color: var(--text-secondary);
+  }
+  
+  .floatingLabel input:focus ~ label,
+  .floatingLabel textarea:focus ~ label,
+  .floatingLabel input:not(:placeholder-shown) ~ label,
+  .floatingLabel textarea:not(:placeholder-shown) ~ label {
+    top: -0.75rem;
+    left: 0.75rem;
+    font-size: 0.75rem;
+    padding: 0 0.5rem;
+    background-color: var(--bg-secondary);
+    border-radius: 4px;
+    opacity: 1;
+    color: var(--accent-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .submitButton {
+    display: block;
+    width: 100%;
+    padding: 1.25rem;
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-color-dark) 100%);
+    color: var(--bg-primary);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(var(--accent-rgb), 0.3);
+  }
+  
+  .submitButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(var(--accent-rgb), 0.4);
+  }
+  
+  .submitButton:active {
+    transform: translateY(-1px);
+  }
+  
+  .submitButton::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transform: translateX(-100%);
+  }
+  
+  .submitButton:hover::after {
+    animation: shimmer 1.5s infinite;
+  }
+  
+  .submitButton:disabled {
+    background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.7) 0%, rgba(var(--accent-rgb), 0.5) 100%);
+    cursor: not-allowed;
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(var(--accent-rgb), 0.2);
+  }
+  
+  .formResponse {
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .success {
+    background-color: rgba(var(--success-rgb), 0.1);
+    color: var(--success-color);
+    border: 1px solid rgba(var(--success-rgb), 0.2);
+  }
+  
+  .error {
+    background-color: rgba(var(--error-rgb), 0.1);
+    color: var(--error-color);
+    border: 1px solid rgba(var(--error-rgb), 0.2);
+  }
+  
+  .closeButton {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font-size: 1.2rem;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+    width: 24px;
+  }
+  
+  .closeButton:hover {
+    opacity: 1;
+  }
+  
+  /* Animations */
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes shimmer {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .contactForm {
+      padding: 2rem 1.5rem;
+      margin: 0 1rem;
+      border-radius: 12px;
+    }
+    
+    .formGroup {
+      margin-bottom: 1.5rem;
+    }
+  }
+  
+  /* Added decoration elements */
+  .decorElement {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(40px);
+    z-index: -1;
+  }
+  
+  .decorElement1 {
+    top: -10%;
+    left: -5%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(var(--accent-rgb), 0.15) 0%, transparent 70%);
+  }
+  
+  .decorElement2 {
+    bottom: -15%;
+    right: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(var(--accent-rgb), 0.1) 0%, transparent 70%);
+  }
+  
+  .sectionTitle {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    background: linear-gradient(to right, var(--text-primary), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  
+  .sectionSubtitle {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    text-align: center;
+    color: var(--text-secondary);
+    font-weight: 300;
+  }
+  
+  .formGroup input::placeholder,
+  .formGroup textarea::placeholder {
+    color: transparent;
+  }
+  
+  /* Utility classes */
+  .fadeOut {
+    animation: fadeOut 0.5s forwards;
+  }

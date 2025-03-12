@@ -1,11 +1,17 @@
 :root {
   --bg-primary: #0a0a0a;
   --bg-secondary: #1a1a1a;
+  --bg-secondary-rgb: 26, 26, 26;
   --text-primary: #ffffff;
   --text-secondary: #b8b8b8;
+  --text-secondary-rgb: 184, 184, 184;
   --accent-color: #00ffff;
   --accent-color-dark: #00cccc;
+  --accent-rgb: 0, 255, 255;
   --success-color: #00ffbb;
+  --success-rgb: 0, 255, 187;
+  --error-color: #ff4757;
+  --error-rgb: 255, 71, 87;
 }
 
 * {
