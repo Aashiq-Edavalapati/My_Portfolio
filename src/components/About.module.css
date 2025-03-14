@@ -270,6 +270,24 @@
   box-shadow: 0 5px 10px rgba(var(--accent-color-rgb, 0, 200, 255), 0.2);
 }
 
+.typewriter {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 3px;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 @media (max-width: 992px) {
   .content {
     gap: 3rem;

@@ -1,6 +1,44 @@
-import styles from "./About.module.css"
-import profilePic from '../assets/profilePic.jpg'
+import { useState, useEffect } from 'react';
+import styles from "./About.module.css";
+import profilePic from '../assets/profilePic.jpg';
+
 const About = () => {
+  const [text, setText] = useState("");
+  const fullText = "Hello, I'm Aashiq Edavalapati";
+  const [index, setIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [typingSpeed, setTypingSpeed] = useState(100);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        // Typing
+        if (index < fullText.length) {
+          setText(prev => prev + fullText[index]);
+          setIndex(index + 1);
+          setTypingSpeed(100); // Normal typing speed
+        } else {
+          // Pause at the end before starting to delete
+          setIsDeleting(true);
+          setTypingSpeed(2000); // Pause duration before deleting
+        }
+      } else {
+        // Deleting
+        if (text.length > 0) {
+          setText(prev => prev.slice(0, -1));
+          setTypingSpeed(50); // Faster deletion speed
+        } else {
+          // Reset after deletion
+          setIsDeleting(false);
+          setIndex(0);
+          setTypingSpeed(1000); // Pause before retyping
+        }
+      }
+    }, typingSpeed);
+    
+    return () => clearTimeout(timeout);
+  }, [index, isDeleting, text, fullText]);
+
   return (
     <section id="about" className={styles.about}>
       <h2 className="section-title">About Me</h2>
@@ -9,7 +47,7 @@ const About = () => {
           <img src={profilePic} alt="Aashiq Edavalapati" className={styles.profileImage} />
         </div>
         <div className={styles.bio}>
-          <h3>Hello, I'm Aashiq Edavalapati</h3>
+          <h3 className={styles.typewriter}>{text}<span className={styles.cursor}>|</span></h3>
           <p>
             A passionate second-year Computer Science student with a deep interest in Data Analytics, Software Development. With strong problem-solving skills and a 100+ days LeetCode streak, I thrive on tackling complex challenges.
           </p>
@@ -33,6 +71,7 @@ const About = () => {
         </div>
       </div>
     </section>
-  )
-}
-export default About
+  );
+};
+
+export default About;
