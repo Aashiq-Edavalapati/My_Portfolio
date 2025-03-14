@@ -355,8 +355,17 @@
 .modalFlexContainer {
   display: flex;
   flex-direction: row;
-  height: calc(90vh - 90px);
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
   overflow: hidden;
+  max-height: 80vh; /* Ensure the modal content does not exceed the viewport height */
+}
+
+.modalBodyScrollable {
+  overflow-y: auto; /* Allow scrolling for the modal body */
+  max-height: calc(80vh - 100px); /* Adjust height to fit within the modal */
 }
 
 .modalImageViewer {
@@ -418,14 +427,6 @@
   color: var(--text-secondary);
   min-width: 50px;
   text-align: center;
-}
-
-.modalBodyScrollable {
-  flex: 1;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .modalBody {
