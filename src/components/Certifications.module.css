@@ -28,7 +28,7 @@
   margin-bottom: 3rem;
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-end;
   flex-wrap: wrap;
   gap: 1.5rem;
