@@ -149,7 +149,7 @@ const Projects = () => {
   const stats = [
     {
       title: "Total Problems Solved",
-      value: leetCodeData.totalSolved,
+      value: leetCodeData.totalSolved === '-' ? "600+" : leetCodeData.totalSolved,
       icon: <Code2 size={24} />,
       color: "var(--color-primary)"
     },
@@ -161,7 +161,7 @@ const Projects = () => {
     },
     {
       title: "Daily Streak",
-      value: leetCodeData.dailyStreak,
+      value: leetCodeData.dailyStreak === '-' ? "125" : leetCodeData.dailyStreak,
       icon: <Zap size={24} />,
       color: "var(--color-accent)"
     },
@@ -173,13 +173,13 @@ const Projects = () => {
     },
     {
       title: "Solution Upvotes",
-      value: leetCodeData.reputation === '-' ? 0 : leetCodeData.reputation,
+      value: leetCodeData.reputation === '-' ? "300+" : leetCodeData.reputation,
       icon: <ThumbsUp size={24} />,
       color: "var(--color-info)"
     },
     {
       title: "Global Ranking",
-      value: `#${leetCodeData.ranking}`,
+      value: `#${leetCodeData.ranking === '-' ? "90000-" : leetCodeData.ranking}`,
       icon: <Award size={24} />,
       color: "var(--color-warning)"
     }
@@ -188,20 +188,20 @@ const Projects = () => {
   const difficultyStats = [
     {
       title: "Easy",
-      value: leetCodeData.easySolved || 0,
-      total: leetCodeData.totalEasy || 0,
+      value: leetCodeData.easySolved || 453,
+      total: leetCodeData.totalEasy || 867,
       color: "#00b8a3"
     },
     {
       title: "Medium",
-      value: leetCodeData.mediumSolved || 0,
-      total: leetCodeData.totalMedium || 0,
+      value: leetCodeData.mediumSolved || 145,
+      total: leetCodeData.totalMedium || 1813,
       color: "#ffc01e"
     },
     {
       title: "Hard",
-      value: leetCodeData.hardSolved || 0,
-      total: leetCodeData.totalHard || 0,
+      value: leetCodeData.hardSolved || 3,
+      total: leetCodeData.totalHard || 811,
       color: "#ff375f"
     }
   ];
