@@ -188,19 +188,19 @@ const Projects = () => {
   const difficultyStats = [
     {
       title: "Easy",
-      value: leetCodeData.easySolved || 453,
-      total: leetCodeData.totalEasy || 867,
+      value: leetCodeData.easySolved === '-' ? 453 : leetCodeData.easySolved,
+      total: leetCodeData.totalEasy === '-' ? 867 : leetCodeData.totalEasy,
       color: "#00b8a3"
     },
     {
       title: "Medium",
-      value: leetCodeData.mediumSolved || 145,
-      total: leetCodeData.totalMedium || 1813,
+      value: leetCodeData.mediumSolved === '-' ? 144 : leetCodeData.mediumSolved,
+      total: leetCodeData.totalMedium === '-' ? 1711 : leetCodeData.totalMedium,      
       color: "#ffc01e"
     },
     {
       title: "Hard",
-      value: leetCodeData.hardSolved || 3,
+      value: leetCodeData.hardSolved === '-' ? 3 : leetCodeData.hardSolved,
       total: leetCodeData.totalHard || 811,
       color: "#ff375f"
     }
