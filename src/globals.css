@@ -117,48 +117,21 @@ section::after {
   background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
 }
 
-.modalContent {
-  scrollbar-width: thin;
-  scrollbar-color: #00ffff rgba(0, 255, 255, 0.1);
+*::-webkit-scrollbar {
+  width: 0.5rem;
 }
 
-.modalContent::-webkit-scrollbar {
-  width: 8px;
+*::-webkit-scrollbar-track {
+  background: var(--bg-primary);
 }
 
-.modalContent::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  margin: 5px 0;
+*::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 0.5rem;
 }
 
-.modalContent::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #00ffff, #0088ff);
-  border-radius: 10px;
-  border: 2px solid rgba(0, 0, 0, 0.3);
-}
-
-.modalContent::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #00ffff, #00ccff);
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color-dark);
   box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
 }
 
-.modalContent::-webkit-scrollbar-button {
-  display: none;
-}
-
-body::-webkit-scrollbar {
-  width: 10px;
-}
-body::-webkit-scrollbar-track {
-  background: transparent;
-}
-body::-webkit-scrollbar-thumb {
-  background: var(--accent-color);
-  border-radius: 5rem;
-}
-
-* {
-  scrollbar-width: thin;
-  scrollbar-color: #00ffff rgba(0, 0, 0, 0.3);
-}

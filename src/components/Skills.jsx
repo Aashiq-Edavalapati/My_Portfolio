@@ -274,14 +274,7 @@ const SkillModal = ({ skill, onClose }) => {
                   </div>
                 ))
               ) : (
-                <div className={styles.experienceLevelCard}>
-                  <h4>Experience Level</h4>
-                  <div className={styles.experienceMeter}>
-                    <div className={`${styles.experienceLevel} ${styles[details.experience.toLowerCase()]}`}>
-                      {details.experience}
-                    </div>
-                  </div>
-                </div>
+                <p className={styles.emptyState} style={{margin: "auto", width: "100%"}}>No certifications to display yet.</p>
               )}
             </div>
           )}

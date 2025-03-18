@@ -1,15 +1,17 @@
+import portfolioPreview from "../assets/portfolioPreview.jpg"
+
 const skillDetails = {
   // Programming Languages
   "Python": {
     description: "High-level programming language with dynamic semantics and rich data structures.",
     experience: "Advanced",
-    startedYear: 2018,
+    startedYear: 2023,
     codeSnippet: `
 import pandas as pd
 import matplotlib.pyplot as plt
 # Create a simple dataframe
-data = {'Year': [2018, 2019, 2020, 2021, 2022],
-'Projects': [2, 5, 8, 12, 15]}
+data = {'Year': [2023, 2024, 2025],
+'Projects': [2, 5, 8]}
 df = pd.DataFrame(data)
 # Plot the data
 plt.figure(figsize=(6, 3))
@@ -22,24 +24,18 @@ print("Project growth visualization complete!")
     codeOutput: "Project growth visualization complete!",
     projects: [
       {
-        name: "Data Analysis Dashboard",
-        description: "A dashboard for visualizing complex datasets",
-        link: "https://github.com/yourusername/data-dashboard",
-        image: "https://placeholder.com/data-dashboard.png"
+        name: "Link-Us",
+        description: "A CLI based social networking system with friend and post recommendation systems.",
+        link: "https://github.com/adithya-menon-r/Link-Us",
+        image: "https://as2.ftcdn.net/v2/jpg/00/71/77/63/1000_F_71776384_zRstSHXTHOfRmvuXy1jQGnt14QO3SqhH.jpg"
       },
-      {
-        name: "Machine Learning Model",
-        description: "Predictive model for customer behavior",
-        link: "https://github.com/yourusername/ml-model",
-        image: "https://placeholder.com/ml-model.png"
-      }
     ],
     certifications: [
       {
-        name: "Python for Data Science",
+        name: "Automate Cybersecurity Tasks with Python",
         issuer: "Coursera",
-        date: "2020",
-        link: "https://coursera.org/certificate/123"
+        date: "2024",
+        link: "https://www.coursera.org/account/accomplishments/verify/P9J7AK5AX276"
       }
     ],
     progressData: [
@@ -54,7 +50,7 @@ print("Project growth visualization complete!")
   "Java": {
     description: "Object-oriented programming language designed for portability and cross-platform development.",
     experience: "Intermediate",
-    startedYear: 2019,
+    startedYear: 2023,
     codeSnippet: `
 import java.util.*;
 
@@ -81,20 +77,10 @@ public class InteractiveSort {
 `,
     codeOutput: "Original list: [34, 12, 78, 56, 21, 45]\nSorted list: [12, 21, 34, 45, 56, 78]\nFound 45 at position: 3\nShuffled list: [45, 78, 21, 12, 56, 34]",
     projects: [
-      {
-        name: "Inventory Management System",
-        description: "Desktop application for tracking inventory with database integration",
-        link: "https://github.com/yourusername/inventory-system",
-        image: "https://placeholder.com/inventory.png"
-      }
+      
     ],
     certifications: [
-      {
-        name: "Java Programming Masterclass",
-        issuer: "Udemy",
-        date: "2020",
-        link: "https://udemy.com/certificate/java-101"
-      }
+      
     ],
     progressData: [
       { year: 2019, level: 1 },
@@ -106,8 +92,8 @@ public class InteractiveSort {
   
   "JavaScript": {
     description: "High-level programming language that enables interactive web pages.",
-    experience: "Advanced",
-    startedYear: 2017,
+    experience: "Intermediate",
+    startedYear: 2023,
     codeSnippet: `
 // Simple interactive counter
 let count = 0;
@@ -127,22 +113,11 @@ const updateCounter = () => {
         name: "Interactive Portfolio",
         description: "Personal portfolio website with interactive elements",
         link: "https://github.com/yourusername/portfolio",
-        image: "https://placeholder.com/portfolio.png"
+        image: portfolioPreview
       },
-      {
-        name: "Weather Dashboard",
-        description: "Real-time weather information using API integration",
-        link: "https://github.com/yourusername/weather-app",
-        image: "https://placeholder.com/weather.png"
-      }
     ],
     certifications: [
-      {
-        name: "JavaScript - The Complete Guide",
-        issuer: "Udemy",
-        date: "2019",
-        link: "https://udemy.com/certificate/456"
-      }
+      
     ],
     progressData: [
       { year: 2017, level: 1 },
