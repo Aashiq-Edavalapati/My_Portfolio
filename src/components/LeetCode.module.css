@@ -1,0 +1,384 @@
+.leetcodeSection {
+    max-width: 1200px;
+    margin: 4rem auto 0;
+    padding: 2.5rem;
+    background: linear-gradient(to bottom right, rgba(10, 10, 31, 0.8), rgba(20, 20, 50, 0.6));
+    border-radius: 16px;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+  }
+  
+  .leetcodeTitle {
+    font-size: 2.2rem;
+    color: #00ffff;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    font-weight: 700;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 1rem;
+  }
+  
+  .leetcodeTitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.8), transparent);
+  }
+  
+  .leetcodeBadges {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+    perspective: 1000px;
+  }
+  
+  .badgeContainer {
+    width: 110px;
+    height: 110px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+  }
+  
+  .badgeContainer:hover {
+    transform: rotateY(10deg) rotateX(5deg);
+  }
+  
+  .leetcodeBadge {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.4));
+    transition: all 0.3s ease;
+  }
+  
+  .badgeContainer:hover .leetcodeBadge {
+    filter: drop-shadow(0 0 15px rgba(0, 255, 255, 0.7));
+  }
+  
+  .leetcodeStats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.8rem;
+    margin-bottom: 4rem;
+  }
+  
+  .statCard {
+    background: linear-gradient(145deg, rgba(50, 50, 70, 0.4), rgba(30, 30, 50, 0.7));
+    padding: 1.8rem;
+    border-radius: 14px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .statCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.1), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .statCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  .statCard:hover::before {
+    opacity: 1;
+  }
+  
+  .statIcon {
+    margin-bottom: 1.2rem;
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .statCard h4 {
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    margin-bottom: 0.6rem;
+    font-weight: 700;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 2;
+  }
+  
+  .statCard p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .difficultyBreakdown {
+    margin-bottom: 3.5rem;
+    background: rgba(0, 0, 0, 0.25);
+    padding: 2rem;
+    border-radius: 14px;
+    border: 1px solid rgba(0, 255, 255, 0.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .breakdownTitle {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    color: #e0e0e0;
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.15);
+    font-weight: 600;
+  }
+  
+  .difficultyStats {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .difficultyStat {
+    display: grid;
+    grid-template-columns: 80px 80px 1fr;
+    align-items: center;
+    gap: 1.8rem;
+    padding: 1rem 1.2rem;
+    border-radius: 10px;
+    background: linear-gradient(to right, rgba(40, 40, 40, 0.7), rgba(50, 50, 50, 0.5));
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .difficultyStat:hover {
+    background: linear-gradient(to right, rgba(45, 45, 45, 0.8), rgba(55, 55, 55, 0.6));
+    transform: translateX(8px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .difficultyLabel {
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .difficultyValue {
+    text-align: right;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+  
+  .barContainer {
+    position: relative;
+    height: 10px;
+    border-radius: 5px;
+    background: rgba(20, 20, 20, 0.5);
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+  }
+  
+  .difficultyBar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: currentColor;
+    border-radius: 5px;
+    transition: width 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+    box-shadow: 0 0 15px currentColor;
+    opacity: 0.8;
+  }
+  
+  .difficultyBar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    filter: blur(3px);
+  }
+  
+  .difficultyStat[data-difficulty="Easy"] {
+    border-left: 4px solid #00b8a3;
+  }
+  
+  .difficultyStat[data-difficulty="Easy"]:hover .difficultyBar {
+    opacity: 0.9;
+    box-shadow: 0 0 20px #00b8a3;
+  }
+  
+  .difficultyStat[data-difficulty="Medium"] {
+    border-left: 4px solid #ffc01e;
+  }
+  
+  .difficultyStat[data-difficulty="Medium"]:hover .difficultyBar {
+    opacity: 0.9;
+    box-shadow: 0 0 20px #ffc01e;
+  }
+  
+  .difficultyStat[data-difficulty="Hard"] {
+    border-left: 4px solid #ff375f;
+  }
+  
+  .difficultyStat[data-difficulty="Hard"]:hover .difficultyBar {
+    opacity: 0.9;
+    box-shadow: 0 0 20px #ff375f;
+  }
+  
+  .consistencyGraph {
+    margin-top: 3.5rem;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 14px;
+    border: 1px solid rgba(0, 255, 255, 0.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .graphTitle {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    color: #e0e0e0;
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.15);
+    font-weight: 600;
+  }
+  
+  .graphContainer {
+    display: flex;
+    gap: 3px;
+    overflow-x: auto;
+    padding: 1.5rem 0.5rem;
+    justify-content: center;
+    min-height: 120px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 255, 255, 0.3) rgba(0, 0, 0, 0.2);
+  }
+  
+  .graphContainer::-webkit-scrollbar {
+    height: 6px;
+  }
+  
+  .graphContainer::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+  }
+  
+  .graphContainer::-webkit-scrollbar-thumb {
+    background: rgba(0, 255, 255, 0.3);
+    border-radius: 3px;
+  }
+  
+  .graphWeek {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  
+  .graphDay {
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .graphDay:hover {
+    transform: scale(1.3);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    z-index: 10;
+  }
+  
+  .graphLegend {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .legendSquares {
+    display: flex;
+    gap: 4px;
+  }
+  
+  .legendSquare {
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  @media (max-width: 768px) {
+    .leetcodeSection {
+      padding: 1.5rem;
+    }
+    
+    .leetcodeTitle {
+      font-size: 1.8rem;
+    }
+    
+    .projectGrid {
+      grid-template-columns: 1fr;
+    }
+  
+    .leetcodeStats {
+      grid-template-columns: 1fr;
+    }
+  
+    .difficultyStat {
+      grid-template-columns: 70px 70px 1fr;
+      gap: 0.8rem;
+      padding: 0.8rem;
+    }
+    
+    .difficultyLabel {
+      font-size: 0.9rem;
+    }
+    
+    .difficultyValue {
+      font-size: 0.9rem;
+    }
+    
+    .graphContainer {
+      justify-content: flex-start;
+    }
+    
+    .badgeContainer {
+      width: 90px;
+      height: 90px;
+    }
+  }

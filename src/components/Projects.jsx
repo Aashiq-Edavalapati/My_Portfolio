@@ -8,6 +8,7 @@ import portfolioPreview from '../assets/portfolioPreview.jpg';
 import luxeRidePreview from '../assets/luxeRidePreview.png';
 import agriChainPreview from '../assets/agriChainPreview.png';
 import fiftyday2025 from '../assets/2025-50.gif';
+import LeetCode from "./LeetCode";
 
 const projects = [
   {
@@ -69,7 +70,7 @@ const Projects = () => {
   return (
     <section id="projects" className={styles.projects}>
       <h2 className="section-title">Projects & Achievements</h2>
-      
+
       {/* Projects Grid */}
       <div className={styles.projectGrid}>
         {displayedProjects.map((project, index) => (
@@ -79,9 +80,9 @@ const Projects = () => {
             onMouseEnter={() => setExpandedProject(index)}
             onMouseLeave={() => setExpandedProject(null)}
             onClick={() => handleProjectInteraction(project)}
-            whileHover={{ 
-              scale: 1.03, 
-              boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)" 
+            whileHover={{
+              scale: 1.03,
+              boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)"
             }}
             transition={{ type: "spring", stiffness: 300, damping: 15 }}
           >
@@ -146,13 +147,13 @@ const Projects = () => {
       {/* Preview Modal */}
       <AnimatePresence>
         {showPreview && selectedProject && (
-          <motion.div 
+          <motion.div
             className={styles.previewModal}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <motion.div 
+            <motion.div
               className={styles.previewContent}
               initial={{ scale: 0.8, y: 50 }}
               animate={{ scale: 1, y: 0 }}
@@ -165,45 +166,43 @@ const Projects = () => {
                   <X size={24} />
                 </button>
               </div>
-              
+
               <div className={styles.previewBody}>
                 {selectedProject.liveDemo ? (
                   <div className={styles.iframeContainer}>
-                    <iframe 
-                      src={selectedProject.liveDemo} 
+                    <iframe
+                      src={selectedProject.liveDemo}
                       title={`${selectedProject.title} Preview`}
                       className={styles.previewIframe}
                       sandbox="allow-scripts allow-same-origin allow-forms"
-                      loading="lazy"
-                    />
+                      loading="lazy" />
                   </div>
                 ) : (
                   <div className={styles.noPreview}>
-                    <img 
-                      src={selectedProject.image} 
-                      alt={selectedProject.title} 
-                      className={styles.fallbackImage} 
-                    />
+                    <img
+                      src={selectedProject.image}
+                      alt={selectedProject.title}
+                      className={styles.fallbackImage} />
                     <p>Live preview not available for this project</p>
                   </div>
                 )}
               </div>
-              
+
               <div className={styles.previewFooter}>
-                <a 
-                  href={selectedProject.github} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <a
+                  href={selectedProject.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={styles.previewLink}
                 >
                   <Github size={18} />
                   View on GitHub
                 </a>
                 {selectedProject.liveDemo && (
-                  <a 
-                    href={selectedProject.liveDemo} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
+                  <a
+                    href={selectedProject.liveDemo}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={styles.previewLink}
                   >
                     <ExternalLink size={18} />
@@ -215,6 +214,8 @@ const Projects = () => {
           </motion.div>
         )}
       </AnimatePresence>
+
+      <LeetCode />
     </section>
   );
 };
