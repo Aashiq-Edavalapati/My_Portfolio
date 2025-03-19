@@ -47,7 +47,10 @@ const About = () => {
           <img src={profilePic} alt="Aashiq Edavalapati" className={styles.profileImage} />
         </div>
         <div className={styles.bio}>
-          <h3 className={styles.typewriter}>{text}<span className={styles.cursor}>|</span></h3>
+          <h3 className={styles.typewriter}>
+            {text}
+            <span className={`${styles.cursor} ${text.length === fullText.length && !isDeleting ? styles.blink : ''}`}>|</span>
+          </h3>
           <p>
             A passionate second-year Computer Science student with a deep interest in Data Analytics, Software Development. With strong problem-solving skills and a 100+ days LeetCode streak, I thrive on tackling complex challenges.
           </p>
@@ -73,5 +76,3 @@ const About = () => {
     </section>
   );
 };
-
-export default About;

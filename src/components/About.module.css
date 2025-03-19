@@ -378,3 +378,12 @@
     background: rgba(255, 255, 255, 0.05);
   }
 }
+
+.cursor {
+  display: inline-block;
+  margin-left: 3px;
+  width: 3px;
+  height: 1.2em;
+  background-color: var(--accent-color); 
+  animation: blink 1s infinite;
+}
