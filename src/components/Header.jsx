@@ -6,6 +6,15 @@ const Header = ({ activeSection }) => {
   const [scrolled, setScrolled] = useState(false);
   const navRef = useRef(null);
   
+  const nameVariants = [
+    { text: "shiq", accent: "Aa" },
+    { text: "シク", accent: "アー" },
+    { text: "शिक", accent: "आ" },  
+    { text: "షిక్", accent: "ఆ" }  
+  ];
+  
+  const [currentNameIndex, setCurrentNameIndex] = useState(0);
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -28,6 +37,15 @@ const Header = ({ activeSection }) => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [isMenuOpen]);
 
+  // Change name every 7 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentNameIndex((prevIndex) => (prevIndex + 1) % nameVariants.length);
+    }, 7000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   const navItems = ["About", "Projects", "Skills", "Education", "Certifications", "Contact"];
 
   return (
@@ -35,7 +53,8 @@ const Header = ({ activeSection }) => {
       <div className={styles.headerContainer}>
         <div className={styles.logoContainer}>
           <a href="#" className={styles.logo}>
-            <span className={styles.logoAccent}>Aa</span>shiq
+            <span className={styles.logoAccent}>{nameVariants[currentNameIndex].accent}</span>
+            {nameVariants[currentNameIndex].text}
           </a>
         </div>
         

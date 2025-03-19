@@ -3,41 +3,47 @@ import styles from "./About.module.css";
 import profilePic from '../assets/profilePic.jpg';
 
 const About = () => {
+  const texts = [
+    "Hello, I'm Aashiq Edavalapati",
+    "こんにちは、私はアーシク・エダヴァラパティです",
+    "హలో, నేను ఆషిక్ ఇడవలపాటి",
+    "नमस्ते, मैं आशिक इदवलपती हूं।"
+  ];
+  
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [text, setText] = useState("");
-  const fullText = "Hello, I'm Aashiq Edavalapati";
   const [index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [typingSpeed, setTypingSpeed] = useState(100);
 
   useEffect(() => {
+    const fullText = texts[currentTextIndex];
+
     const timeout = setTimeout(() => {
       if (!isDeleting) {
-        // Typing
         if (index < fullText.length) {
           setText(prev => prev + fullText[index]);
           setIndex(index + 1);
-          setTypingSpeed(100); // Normal typing speed
+          setTypingSpeed(100); 
         } else {
-          // Pause at the end before starting to delete
           setIsDeleting(true);
-          setTypingSpeed(2000); // Pause duration before deleting
+          setTypingSpeed(2000); 
         }
       } else {
-        // Deleting
         if (text.length > 0) {
           setText(prev => prev.slice(0, -1));
-          setTypingSpeed(50); // Faster deletion speed
+          setTypingSpeed(50);
         } else {
-          // Reset after deletion
           setIsDeleting(false);
           setIndex(0);
-          setTypingSpeed(1000); // Pause before retyping
+          setCurrentTextIndex(prev => (prev + 1) % texts.length);
+          setTypingSpeed(1000);
         }
       }
     }, typingSpeed);
     
     return () => clearTimeout(timeout);
-  }, [index, isDeleting, text, fullText]);
+  }, [index, isDeleting, text, texts, currentTextIndex]);
 
   return (
     <section id="about" className={styles.about}>
@@ -49,7 +55,7 @@ const About = () => {
         <div className={styles.bio}>
           <h3 className={styles.typewriter}>
             {text}
-            <span className={`${styles.cursor} ${text.length === fullText.length && !isDeleting ? styles.blink : ''}`}>|</span>
+            <span className={`${styles.cursor} ${text.length === texts[currentTextIndex].length && !isDeleting ? styles.blink : ''}`}>|</span>
           </h3>
           <p>
             A passionate second-year Computer Science student with a deep interest in Data Analytics, Software Development. With strong problem-solving skills and a 100+ days LeetCode streak, I thrive on tackling complex challenges.
