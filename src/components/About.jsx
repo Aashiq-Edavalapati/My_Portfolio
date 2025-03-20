@@ -5,9 +5,7 @@ import profilePic from '../assets/profilePic.jpg';
 const About = () => {
   const texts = [
     "Hello, I'm Aashiq Edavalapati",
-    "こんにちは、私はアーシク・エダヴァラパティです",
-    "హలో, నేను ఆషిక్ ఇడవలపాటి",
-    "नमस्ते, मैं आशिक इदवलपती हूं।"
+    "こんにちは、私はアーシク・エダヴァラパティです"
   ];
   
   const [currentTextIndex, setCurrentTextIndex] = useState(0);

@@ -7,10 +7,7 @@ const Header = ({ activeSection }) => {
   const navRef = useRef(null);
   
   const nameVariants = [
-    { text: "shiq", accent: "Aa" },
-    { text: "シク", accent: "アー" },
-    { text: "शिक", accent: "आ" },  
-    { text: "షిక్", accent: "ఆ" }  
+    { text: "シク", accent: "アー" }
   ];
   
   const [currentNameIndex, setCurrentNameIndex] = useState(0);
