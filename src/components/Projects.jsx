@@ -1,16 +1,32 @@
 "use client"
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Code2, Trophy, Target, Zap, ThumbsUp, Star, Award, Brain, X, ExternalLink, Github } from "lucide-react";
+import { X, ExternalLink, Github } from "lucide-react";
 import styles from "./Projects.module.css";
 import portfolioPreview from '../assets/portfolioPreview.jpg';
 import luxeRidePreview from '../assets/luxeRidePreview.png';
 import agriChainPreview from '../assets/agriChainPreview.png';
-import fiftyday2025 from '../assets/2025-50.gif';
+import gradiaPreview from "../assets/gradiaPreview.png";
 import LeetCode from "./LeetCode";
 
 const projects = [
+  {
+    title: "Gradia",
+    description: "Gradia is an AI powered grading tool designed to help teachers evaluate student answers quickly and fairly. It uses Retrieval Augmented Generation (RAG) to match answers with the uploaded course material and grade responses accordingly - no random AI hallucinations, just grounded grading. It also provides students with helpful feedback and citations, so they know what they did right, what went wrong, and how to improve next time.",
+    technologies: ["Python", "Node JS", "Next JS", "Express", "Gemini API", "GCP"],
+    image: gradiaPreview,
+    github: "https://github.com/tokenomists/Gradia",
+    liveDemo: "https://gradia-tokenomists.vercel.app/"
+  },
+  {
+    title: "AgriChain",
+    description: "AgriChain is a blockchain-powered platform that connects farmers and consumers directly, ensuring fair pricing, transparency, and sustainability in agriculture through smart contracts and AI-driven insights.",
+    technologies: ["Next JS", "Tailwind CSS", "Node JS", "Express", "Gemini API"],
+    image: agriChainPreview,
+    github: "https://github.com/tokenomists/AgriChain",
+    liveDemo: null, 
+  },
   {
     title: "Link-Us",
     description:
@@ -34,15 +50,7 @@ const projects = [
     technologies: ["HTML", "CSS", "JS", "Node JS", "Electron"],
     image: luxeRidePreview,
     github: "https://github.com/Aashiq-Edavalapati/Car-Rental-Website",
-    liveDemo: "https://luxeride-rentals.vercel.app/",
-  },
-  {
-    title: "AgriChain",
-    description: "AgriChain is a blockchain-powered platform that connects farmers and consumers directly, ensuring fair pricing, transparency, and sustainability in agriculture through smart contracts and AI-driven insights.",
-    technologies: ["Next JS", "Tailwind CSS", "Node JS", "Express", "Gemini API"],
-    image: agriChainPreview,
-    github: "https://github.com/tokenomists/AgriChain",
-    liveDemo: null, 
+    liveDemo: null,
   }
 ];
 

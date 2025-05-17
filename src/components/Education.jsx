@@ -13,14 +13,15 @@ const educationData = [
     years: "2023-2027",
     degree: "B.Tech, Computer Science and Engineering",
     location: "Coimbatore",
-    cgpa: "8.81",
+    cgpa: "8.59",
     semesters: [
       { name: "Semester 1", sgpa: "8.43" },
       { name: "Semester 2", sgpa: "9.05" },
       { name: "Semester 3", sgpa: "8.95" },
+      { name: "Semester 4", sgpa: "8.00" }
     ],
     accomplishments: ["Student Volunteer at Anokha Tech Fest 2024"],
-    clubs: ["Intel IOT Club", "Google Developer Student Clubs", "Anokha Department of Computer Science"],
+    clubs: ["Intel IOT Club", "Google Developer Student Clubs", "Anokha - Department of Computer Science"],
   },
   {
     institution: "Narayana Junior College",
@@ -36,7 +37,7 @@ const educationData = [
     logo: scsLogo,
     years: "2018-2021",
     location: "Ongole",
-    marks: "470 / 500",
+    marks: "464 / 500",
   },
 ];
 
