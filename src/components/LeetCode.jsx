@@ -46,7 +46,7 @@ const LeetCode = () => {
       const res = await fetch(`${API_URL}/leetcode/${username}`);
       if (!res.ok) throw new Error(`Status ${res.status}`);
       const json = await res.json();
-      console.log(json.data.matchedUser);
+      // console.log(json.data.matchedUser);
       return json.data.matchedUser;
     } catch (e) {
       console.error(e);
