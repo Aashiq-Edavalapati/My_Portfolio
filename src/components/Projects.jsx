@@ -38,8 +38,8 @@ const projects = [
   },
   {
     title: "Personal Portfolio",
-    description: "A personal portfolio website built using Vite, React to showcase my skills, projects, certifications, and achievements. It features a modern UI, smooth animations, and a responsive design. Deployed on Vercel for fast performance.",
-    technologies: ["React", "CSS"],
+    description: "A personal portfolio website built using Vite, React to showcase my skills, projects, certifications, and achievements. I have also used web scraping techniques to dynamicaly fetch and display my LeetCode stats, GitHub contributions, and other relevant data.",
+    technologies: ["React", "CSS", "Python", "Web Scraping"],
     image: portfolioPreview,
     github: "https://github.com/Aashiq-Edavalapati/My_Portfolio",
     liveDemo: "https://aashiqedavalapati.vercel.app/",
