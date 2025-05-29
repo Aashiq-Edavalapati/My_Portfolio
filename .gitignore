@@ -28,3 +28,5 @@ package-lock.json
 
 venv
 __pycache__
+
+.env
