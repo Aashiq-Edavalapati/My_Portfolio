@@ -1,8 +1,12 @@
-from flask import Flask, jsonify, request
+import os
+from flask import Flask, jsonify
+from flask_cors import CORS
 from scraper import scrape_leetcode, save_data
 
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all domains — adjust if needed
 
+# Load cookies from environment variables
 COOKIES  = {
     "LEETCODE_SESSION": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfYXV0aF91c2VyX2lkIjoiMTEzMzg4MjUiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJhbGxhdXRoLmFjY291bnQuYXV0aF9iYWNrZW5kcy5BdXRoZW50aWNhdGlvbkJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJiN2VmZmM1ZmM3ODhlMTIxMjE4ODVjOTc5YzdkMDkzNjZhOTVlYzY1NDQyMjI2OGZlMmE2ZjJiZjg4MWJjOTA1Iiwic2Vzc2lvbl91dWlkIjoiNzI3NGI2MDYiLCJpZCI6MTEzMzg4MjUsImVtYWlsIjoiYWFzaGlxZWRhdmFsYXBhdGk1OEBnbWFpbC5jb20iLCJ1c2VybmFtZSI6IkFhc2hpcV9FZGF2YWxhcGF0aSIsInVzZXJfc2x1ZyI6IkFhc2hpcV9FZGF2YWxhcGF0aSIsImF2YXRhciI6Imh0dHBzOi8vYXNzZXRzLmxlZXRjb2RlLmNvbS91c2Vycy9hdmF0YXJzL2F2YXRhcl8xNzAwMzI3MjEyLnBuZyIsInJlZnJlc2hlZF9hdCI6MTc0ODUzOTg1NiwiaXAiOiIyNy43LjEzLjk1IiwiaWRlbnRpdHkiOiIwZTAzNjllMjgxM2RiN2RlYjI2ZTU5MzdjMzUzYWFiNCIsImRldmljZV93aXRoX2lwIjpbIjc3OGYwZmM2MjE0ZDBjNjMzOTIwNDVjNTIwMTM3NDhiIiwiMjcuNy4xMy45NSJdfQ.XPBEktAsfijxqDihWXdgZaJ5vineP9zyfwhun3OY1q8",
     "csrftoken": "ir9SQDOwG4mhpaTv5tUSCkzZqViLBuzpkUD3wECUBPhAb7NHEy7ZNhcqK6QV5pL7",
@@ -13,10 +17,11 @@ COOKIES  = {
 def get_leetcode_data(username):
     try:
         data = scrape_leetcode(username, COOKIES)
-        save_data(data)  # save to leetcode_data.json
+        save_data(data)  # save locally in leetcode_data.json
         return jsonify(data)
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    # For local dev only, listen on all interfaces so you can test with Docker if needed
+    app.run(host="0.0.0.0", port=5000, debug=True)

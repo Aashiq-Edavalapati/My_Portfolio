@@ -1,4 +1,4 @@
-Flask
-flask-cors
-requests
-beautifulsoup4
+Flask==2.3.2
+requests==2.31.0
+flask-cors==3.0.10
+gunicorn
