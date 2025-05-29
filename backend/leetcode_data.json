@@ -1,0 +1,59 @@
+{
+    "data": {
+        "matchedUser": {
+            "username": "Aashiq_Edavalapati",
+            "profile": {
+                "ranking": 85736,
+                "reputation": 353,
+                "starRating": 3.0,
+                "userAvatar": "https://assets.leetcode.com/users/avatars/avatar_1700327212.png",
+                "realName": "Aashiq Edavalapati",
+                "aboutMe": "",
+                "school": "Amrita Vishwa Vidyapeetham, Coimbatore",
+                "websites": [
+                    "https://aashiqedavalapati.vercel.app"
+                ],
+                "countryName": "India",
+                "company": null,
+                "jobTitle": null,
+                "skillTags": [
+                    "Python3",
+                    "java",
+                    "c",
+                    "javascript",
+                    "mysql",
+                    "Go",
+                    "c++"
+                ],
+                "postViewCount": 27881,
+                "postViewCountDiff": 321,
+                "solutionCount": 28,
+                "solutionCountDiff": 0
+            },
+            "submitStats": {
+                "acSubmissionNum": [
+                    {
+                        "difficulty": "All",
+                        "count": 626,
+                        "submissions": 1485
+                    },
+                    {
+                        "difficulty": "Easy",
+                        "count": 471,
+                        "submissions": 1087
+                    },
+                    {
+                        "difficulty": "Medium",
+                        "count": 152,
+                        "submissions": 393
+                    },
+                    {
+                        "difficulty": "Hard",
+                        "count": 3,
+                        "submissions": 5
+                    }
+                ]
+            }
+        }
+    }
+}
