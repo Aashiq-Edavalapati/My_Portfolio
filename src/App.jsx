@@ -8,6 +8,7 @@ import Certifications from "./components/Certifications"
 import Contact from "./components/Contact"
 import Footer from "./components/Footer"
 import styles from "./App.module.css"
+import CapstoneProjectSection from "./components/Capstone"
 
 function App() {
   const [activeSection, setActiveSection] = useState("about");
@@ -37,6 +38,7 @@ function App() {
     <div className={styles.App}>
       <Header activeSection={activeSection} />
       <About />
+      <CapstoneProjectSection />
       <Projects />
       <Skills />
       <Education />
