@@ -2,6 +2,9 @@
 
 A **personal portfolio website** built with **Vite and React**, designed to showcase my **skills, projects, certifications, and achievements** with a modern and responsive UI.  
 
+![image](https://github.com/user-attachments/assets/213f1011-c0d5-445c-a765-feacac5d7f6b)
+
+
 ## 🚀 Live Demo  
 🔗 [aashiqedavalapati.vercel.app](https://aashiqedavalapati.vercel.app/)  
 
