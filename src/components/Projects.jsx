@@ -28,6 +28,14 @@ const projects = [
     liveDemo: null, 
   },
   {
+    title: "Loan Insights Dashboard using BigQuery & Looker (Google Cloud Capstone)",
+    description: "A real-world capstone project simulating a cloud data analyst role at a FinTech startup. I designed a dashboard and executive summary report for the Treasury team to monitor loan health, performance, and growth using BigQuery and Looker. This included data ingestion, transformation, dashboard design, and insight generation.",
+    technologies: ["Google Cloud Platform", "BigQuery", "Looker", "SQL"],
+    image: "https://github.com/Aashiq-Edavalapati/google-cloud-data-analytics-capstone/blob/main/Part%202%20-%20Analyze%20and%20activate%20your%20data%20with%20Looker%20Enterprise/screenshots/9_Top%2010%20Customers%20by%20Highest%20Income.png?raw=true",
+    github: "https://github.com/Aashiq-Edavalapati/google-cloud-data-analytics-capstone/",
+    liveDemo: null
+  },
+  {
     title: "Link-Us",
     description:
       "LinkUs is a Python-based Social Networking System that enables users to connect based on shared hobbies and mutual connections. It offers functionalities such as user registration, hobby management and friend recommendations based on different criteria. It also features a post and messaging system to facilitate interaction among users.",
