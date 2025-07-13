@@ -113,10 +113,6 @@ const LeetCode = () => {
             alt: "200 Problems Badge",
           },
           {
-            src: "https://assets.leetcode.com/static_assets/marketing/365_new.gif",
-            alt: "365 Days Badge",
-          },
-          {
             src: "https://assets.leetcode.com/static_assets/marketing/2024.gif",
             alt: "2024 Badge",
           },
@@ -124,6 +120,14 @@ const LeetCode = () => {
             src: fiftyday2025,
             alt: "50 day badge 2025",
           },
+          {
+            src: "https://assets.leetcode.com/static_assets/marketing/365_new.gif",
+            alt: "365 Days Badge",
+          },
+          {
+            src: "https://assets.leetcode.com/static_assets/marketing/500.gif",
+            alt: '500 days badge'
+          }
         ].map((badge, idx) => (
           <motion.div
             key={idx}
@@ -157,7 +161,7 @@ const LeetCode = () => {
           },
           {
             title: "Contest Rating",
-            value: leetCodeData.contestRating,
+            value: '-',
             icon: <Trophy size={24} />,
             color: "var(--color-secondary)",
           },
@@ -267,7 +271,7 @@ const LeetCode = () => {
       {/* Consistency graph */}
       <div className={styles.consistencyGraph}>
         <h4 className={styles.graphTitle}>
-          <Target size={18} /> Consistency Graph
+          <Target size={18} /> Consistency Graph <span style={{fontSize: '16px', color: 'red'}}>(* Note that this graph does not represent original data! Original data with sync will be updated soon!)</span>
         </h4>
         <div className={styles.graphContainer}>
           {consistencyData.map((week, wi) => (
