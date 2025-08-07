@@ -2,7 +2,7 @@
   --bg-primary: #0a0a0a;
   --bg-secondary: #1a1a1a;
   --bg-secondary-rgb: 26, 26, 26;
-  --text-primary: #ffffff;
+  --text-primary: #f5d487;
   --text-secondary: #b8b8b8;
   --text-secondary-rgb: 184, 184, 184;
   --accent-color: #00ffff;
@@ -56,7 +56,9 @@ a:hover {
 }
 
 .section-title {
-  font-size: 2.5rem;
+  font-family: 'Poppins';
+  font-weight: 300;
+  font-size: 3rem;
   margin-bottom: 2rem;
   text-align: center;
   color: var(--text-primary);
@@ -67,7 +69,7 @@ a:hover {
 .section-title::after {
   content: "";
   display: block;
-  width: 60px;
+  width: 200px;
   height: 3px;
   background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
   margin: 15px auto 0;

@@ -62,7 +62,7 @@ const About = () => {
             I have hands-on experience in Python, Java, SQL, DBMS, DSA, OOPS, and React, and I love building scalable and innovative solutions. From open-source contributions to hackathon-winning projects, I constantly push the boundaries of what I can create.
           </p>
           <p>
-            <span className={styles.emoji}>🚀</span> Always open to collaborations, exciting projects, and discussions on emerging technologies. Let's build something amazing together!
+            <span className={styles.emoji}>🚀</span> Always open to collaborations, exciting projects, and discussions on emerging technologies. Let&apos;s build something amazing together!
           </p>
           <div className={styles.socialLinks}>
             <a href="https://github.com/Aashiq-Edavalapati" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="GitHub">

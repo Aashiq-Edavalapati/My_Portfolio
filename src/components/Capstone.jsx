@@ -4,7 +4,6 @@ import { Database, BarChart3, Cloud, TrendingUp, Shield, Users, DollarSign, MapP
 
 export default function CapstoneProjectSection() {
   const [activeTab, setActiveTab] = useState('overview');
-  const [isLoaded, setIsLoaded] = useState(false);
   
   const [headerRef, headerInView] = useInView({ threshold: 0.3, triggerOnce: true });
   const [overviewRef, overviewInView] = useInView({ threshold: 0.2, triggerOnce: true });
@@ -472,17 +471,6 @@ export default function CapstoneProjectSection() {
           color: #00cccc;
         }
 
-        .section-title {
-          font-size: clamp(2.5rem, 5vw, 4rem);
-          font-weight: 800;
-          line-height: 1.1;
-          margin-bottom: 1.5rem;
-          background: linear-gradient(135deg, #ffffff 0%, #00cccc 100%);
-          background-clip: text;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          text-shadow: 0 0 40px rgba(0, 204, 204, 0.3);
-        }
 
         .title-highlight {
           position: relative;
@@ -1229,10 +1217,6 @@ export default function CapstoneProjectSection() {
 
           .tab-button {
             justify-content: center;
-          }
-
-          .section-title {
-            font-size: 2.5rem;
           }
 
           .dashboard-features {

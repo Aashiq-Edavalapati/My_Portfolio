@@ -1,4 +1,6 @@
 import portfolioPreview from "../assets/portfolioPreview.jpg"
+import gradiaPreview from '../assets/gradiaPreview.png'
+import agriChainPreview from '../assets/agriChainPreview.png'
 
 const skillDetails = {
   // Programming Languages
@@ -25,9 +27,10 @@ print("Project growth visualization complete!")
     projects: [
       {
         name: "Link-Us",
-        description: "A CLI based social networking system with friend and post recommendation systems.",
-        link: "https://github.com/adithya-menon-r/Link-Us",
-        image: "https://as2.ftcdn.net/v2/jpg/00/71/77/63/1000_F_71776384_zRstSHXTHOfRmvuXy1jQGnt14QO3SqhH.jpg"
+        description: "LinkUs is a Python-based Social Networking System that enables users to connect based on shared hobbies and mutual connections. It offers functionalities such as user registration, hobby management and friend recommendations based on different criteria. It also features a post and messaging system to facilitate interaction among users.",
+        link: null,
+        image: 'https://as2.ftcdn.net/v2/jpg/00/71/77/63/1000_F_71776384_zRstSHXTHOfRmvuXy1jQGnt14QO3SqhH.jpg ',
+        github: 'https://github.com/adithya-menon-r/Link-Us'
       },
     ],
     certifications: [
@@ -112,8 +115,9 @@ const updateCounter = () => {
       {
         name: "Interactive Portfolio",
         description: "Personal portfolio website with interactive elements",
-        link: "https://github.com/yourusername/portfolio",
-        image: portfolioPreview
+        link: "https://aashiqedavalapati.vercel.app",
+        image: portfolioPreview,
+        github: "https://github.com/Aashiq-Edavalapati/My_Portfolio"
       },
     ],
     certifications: [
@@ -177,20 +181,10 @@ int main() {
 `,
     codeOutput: "Before swap: x = 10, y = 20\nAfter swap: x = 20, y = 10\nOriginal array: 64 25 12 22 11\nSorted array: 11 12 22 25 64",
     projects: [
-      {
-        name: "Memory Management Tool",
-        description: "Tool to analyze and optimize memory usage in applications",
-        link: "https://github.com/yourusername/memory-manager",
-        image: "https://placeholder.com/memory-tool.png"
-      }
+      
     ],
     certifications: [
-      {
-        name: "C Programming for Beginners",
-        issuer: "edX",
-        date: "2019",
-        link: "https://edx.org/certificate/c-101"
-      }
+      
     ],
     progressData: [
       { year: 2019, level: 1 },
@@ -273,20 +267,10 @@ int main() {
 `,
     codeOutput: "Vector elements: 5 2 8 1 9 3\nVector sorted!\nVector elements: 1 2 3 5 8 9\nAdded 7 to the vector.\nVector elements: 1 2 3 5 8 9 7\nElement 8 found at position: 4",
     projects: [
-      {
-        name: "Game Engine Components",
-        description: "Core components for a 2D game engine with physics",
-        link: "https://github.com/yourusername/game-engine",
-        image: "https://placeholder.com/game-engine.png"
-      }
+      
     ],
     certifications: [
-      {
-        name: "C++ Programming: From Beginner to Expert",
-        issuer: "Udemy",
-        date: "2021",
-        link: "https://udemy.com/certificate/cpp-202"
-      }
+      
     ],
     progressData: [
       { year: 2020, level: 1 },
@@ -368,20 +352,10 @@ func worker(name string, seconds int, ch chan<- string, wg *sync.WaitGroup) {
 `,
     codeOutput: "Go Concurrency Example\nStarting Task 1 (takes 2 seconds)...\nStarting Task 2 (takes 1 seconds)...\nStarting Task 3 (takes 3 seconds)...\nReceived: Task 2 completed\nReceived: Task 1 completed\nReceived: Task 3 completed\nAll tasks completed in order: [Task 1 completed Task 2 completed Task 3 completed]\n\nGo Map Example:\nAlice: 95\nBob: 87\nCarol: 92\nAfter adding Dave: map[Alice:95 Bob:87 Carol:92 Dave:91]",
     projects: [
-      {
-        name: "REST API Service",
-        description: "High-performance RESTful API built with Go",
-        link: "https://github.com/yourusername/go-rest-api",
-        image: "https://placeholder.com/go-api.png"
-      }
+      
     ],
     certifications: [
-      {
-        name: "Go: The Complete Developer's Guide",
-        issuer: "Udemy",
-        date: "2022",
-        link: "https://udemy.com/certificate/go-2022"
-      }
+      
     ],
     progressData: [
       { year: 2022, level: 2 }
@@ -442,12 +416,7 @@ main = do
 `,
     codeOutput: "Haskell Examples:\nFactorial of 5: 120\nOriginal list: [1,2,3,4,5]\nDoubled list: [2,4,6,8,10]\nEven numbers: [2,4]\nComposed function (double after filtering even): [4,8]\nApply twice (double) to 3: 12\nList comprehension result: [2,3,2,6,3,6]",
     projects: [
-      {
-        name: "Functional Data Processor",
-        description: "Data processing library using functional programming principles",
-        link: "https://github.com/yourusername/haskell-data-processor",
-        image: "https://placeholder.com/haskell-project.png"
-      }
+      
     ],
     certifications: [],
     progressData: [
@@ -527,25 +496,15 @@ main = do
     codeOutput: "An HTML card component showcasing HTML skills with styling",
     projects: [
       {
-        name: "Personal Blog",
-        description: "Responsive blog website using semantic HTML5",
-        link: "https://github.com/yourusername/blog",
-        image: "https://placeholder.com/blog.png"
+        name: "Car-Rental-Website",
+        description: "The Car Rental Website is a desktop application built using Electron.js. This application provides a seamless car rental experience, allowing users to browse available cars, make reservations, and access rental policies.",
+        link: null,
+        image: 'https://private-user-images.githubusercontent.com/146023771/415029983-84671b70-8890-468f-9f0d-a5ad19019d11.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTQ1OTAyNzcsIm5iZiI6MTc1NDU4OTk3NywicGF0aCI6Ii8xNDYwMjM3NzEvNDE1MDI5OTgzLTg0NjcxYjcwLTg4OTAtNDY4Zi05ZjBkLWE1YWQxOTAxOWQxMS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwODA3JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDgwN1QxODA2MTdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1mYWIzYmIyYzc1NjlhYzg0OTg0ZjFkZjliYWQzNzFlZDJhNDI5NjQwOTgzMjAwNGE4Yzk0Yjc5M2YyNzQyOTE3JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.SKwEd8nW3QtXC1p_5_UV7_ap7DtwW8TrvDfBp67yJpU',
+        github: 'https://github.com/Aashiq-Edavalapati/Car-Rental-Website'
       },
-      {
-        name: "Landing Page Template",
-        description: "Accessible landing page template with modern HTML features",
-        link: "https://github.com/yourusername/landing-template",
-        image: "https://placeholder.com/landing.png"
-      }
     ],
     certifications: [
-      {
-        name: "HTML5 Specialist",
-        issuer: "W3Schools",
-        date: "2018",
-        link: "https://w3schools.com/cert/html5-123"
-      }
+      
     ],
     progressData: [
       { year: 2016, level: 1 },
@@ -653,26 +612,10 @@ function toggleTheme() {
 `,
     codeOutput: "CSS styling with animations and hover effects for cards",
     projects: [
-      {
-        name: "CSS Animation Library",
-        description: "Collection of reusable CSS animations and transitions",
-        link: "https://github.com/yourusername/css-animations",
-        image: "https://placeholder.com/animations.png"
-      },
-      {
-        name: "Responsive Dashboard",
-        description: "Fully responsive admin dashboard with CSS Grid and Flexbox",
-        link: "https://github.com/yourusername/responsive-dashboard",
-        image: "https://placeholder.com/dashboard.png"
-      }
+      
     ],
     certifications: [
-      {
-        name: "Advanced CSS and Sass",
-        issuer: "Udemy",
-        date: "2019",
-        link: "https://udemy.com/certificate/css-101"
-      }
+      
     ],
     progressData: [
       { year: 2016, level: 1 },
@@ -800,26 +743,10 @@ export default TaskManager;
 `,
     codeOutput: "Component that displays a task management interface with add, toggle, and delete functionality",
     projects: [
-      {
-        name: "Task Management App",
-        description: "React-based task management application with drag-and-drop functionality",
-        link: "https://github.com/yourusername/task-manager",
-        image: "https://placeholder.com/task-app.png"
-      },
-      {
-        name: "E-commerce Frontend",
-        description: "React-based e-commerce user interface with cart functionality",
-        link: "https://github.com/yourusername/ecommerce-ui",
-        image: "https://placeholder.com/ecommerce.png"
-      }
+      
     ],
     certifications: [
-      {
-        name: "React - The Complete Guide",
-        issuer: "Udemy",
-        date: "2020",
-        link: "https://udemy.com/certificate/789"
-      }
+      
     ],
     progressData: [
       { year: 2019, level: 1 },
@@ -849,11 +776,19 @@ export default function Home() {
     codeOutput: "Renders a homepage with a link to the About page.",
     projects: [
       {
-        name: "AI-Powered Learning Platform",
-        description: "An AI-driven learning platform built with Next.js",
-        link: "https://github.com/yourusername/ai-learning",
-        image: "https://placeholder.com/ai-learning.png"
-      }
+        name: "Gradia",
+        description: "An AI-driven grading platform built with Next.js",
+        link: "https://gradia-tokenomists.vercel.app",
+        image: gradiaPreview,
+        github: "https://github.com/tokenomists/Gradia"
+      },
+      {
+        name: "AgriChain",
+        description: "",
+        link: null,
+        image: agriChainPreview,
+        github: 'https://github.com/tokenomists/AgriChain'
+      },
     ],
     certifications: [],
     progressData: [
@@ -997,7 +932,15 @@ def binary_search(arr, target):
     return -1
     `,
     codeOutput: "Returns the index of the target if found, else -1",
-    projects: [],
+    projects: [
+      {
+        name: "Link-Us",
+        description: "LinkUs is a Python-based Social Networking System that enables users to connect based on shared hobbies and mutual connections. It offers functionalities such as user registration, hobby management and friend recommendations based on different criteria. It also features a post and messaging system to facilitate interaction among users.",
+        link: null,
+        image: 'https://as2.ftcdn.net/v2/jpg/00/71/77/63/1000_F_71776384_zRstSHXTHOfRmvuXy1jQGnt14QO3SqhH.jpg ',
+        github: 'https://github.com/adithya-menon-r/Link-Us'
+      }
+    ],
     certifications: [],
     progressData: [
       { year: 2020, level: 1 },

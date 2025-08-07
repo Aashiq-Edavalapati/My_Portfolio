@@ -25,6 +25,7 @@ import mysqlLogo from "../assets/skills/mysql.png";
 import numpyLogo from "../assets/skills/numpy.png";
 import nextLogo from '../assets/skills/next.png';
 import skillDetails from '../json/SkillDetails';
+
 const skillCategories = [
   {
     name: "Programming Languages",
@@ -250,6 +251,9 @@ const SkillModal = ({ skill, onClose }) => {
                       <p>{project.description}</p>
                       <a href={project.link} target="_blank" rel="noopener noreferrer" className={styles.projectLink}>
                         View Project
+                      </a>
+                      <a href={project.github} target='_blank' rel='noopener noreferrer' className={styles.projectLink} style={{ marginLeft: '20px' }}>
+                        Github
                       </a>
                     </div>
                   </div>

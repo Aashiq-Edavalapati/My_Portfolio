@@ -12,6 +12,7 @@ import {
   Brain,
 } from "lucide-react";
 import fiftyday2025 from "../assets/2025-50.gif";
+import CircularGallery from "./animations/CircularGallery";
 
 const LeetCode = () => {
   // dummy consistency graph
@@ -150,6 +151,7 @@ const LeetCode = () => {
           </motion.div>
         ))}
       </div>
+      
 
       <div className={styles.leetcodeStats}>
         {[
