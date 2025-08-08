@@ -12,7 +12,7 @@ import {
   Brain,
 } from "lucide-react";
 import fiftyday2025 from "../assets/2025-50.gif";
-import CircularGallery from "./animations/CircularGallery";
+import { PacmanLoader } from "react-spinners";
 
 const LeetCode = () => {
   // dummy consistency graph
@@ -93,6 +93,14 @@ const LeetCode = () => {
 
   if (error)
     return <p className={styles.error}>Error loading LeetCode data: {error}</p>;
+
+  if (isLoading) {
+    return (
+      <div>
+        <PacmanLoader />
+      </div>
+    )
+  }
 
   return (
     <div className={styles.leetcodeSection}>

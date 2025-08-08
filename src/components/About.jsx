@@ -56,10 +56,10 @@ const About = () => {
             <span className={`${styles.cursor} ${text.length === texts[currentTextIndex].length && !isDeleting ? styles.blink : ''}`}>|</span>
           </h3>
           <p>
-            A passionate second-year Computer Science student with a deep interest in Data Analytics, Software Development. With strong problem-solving skills and a 100+ days LeetCode streak, I thrive on tackling complex challenges.
+            A passionate third-year Computer Science student with a deep interest in Data Analytics, Software Development. With strong problem-solving skills and a 100+ days LeetCode streak, I thrive on tackling complex challenges.
           </p>
           <p>
-            I have hands-on experience in Python, Java, SQL, DBMS, DSA, OOPS, and React, and I love building scalable and innovative solutions. From open-source contributions to hackathon-winning projects, I constantly push the boundaries of what I can create.
+            I have hands-on experience in Python, Java, SQL, DBMS, DSA, OOPS, and JavaScript, and I love building scalable and innovative solutions. From open-source contributions to hackathon-winning projects, I constantly push the boundaries of what I can create.
           </p>
           <p>
             <span className={styles.emoji}>🚀</span> Always open to collaborations, exciting projects, and discussions on emerging technologies. Let&apos;s build something amazing together!
