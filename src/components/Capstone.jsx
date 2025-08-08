@@ -10,6 +10,7 @@ export default function CapstoneProjectSection() {
   const [part1Ref, part1InView] = useInView({ threshold: 0.2, triggerOnce: true });
   const [part2Ref, part2InView] = useInView({ threshold: 0.2, triggerOnce: true });
   const [statsRef, statsInView] = useInView({ threshold: 0.3, triggerOnce: true });
+  const [isLoaded, setIsLoaded] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => setIsLoaded(true), 100);
