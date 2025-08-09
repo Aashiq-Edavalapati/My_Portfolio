@@ -17,8 +17,7 @@ const Root = () => {
     };
     
     // Set cursor visibility based on device type, not just screen size
-    setShowCursor(!isMobileOrTablet());
-    
+    setShowCursor(!isMobileOrTablet());  
   }, []);
   
   return (

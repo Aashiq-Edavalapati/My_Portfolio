@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import styles from "./Skills.module.css";
 import pythonLogo from "../assets/skills/python.png";
 import javaLogo from "../assets/skills/java.png";
@@ -72,6 +72,7 @@ const skillCategories = [
     ],
   },
 ];
+
 const SkillModal = ({ skill, onClose }) => {
   const [activeTab, setActiveTab] = useState('demo');
   const [isCompiling, setIsCompiling] = useState(false);
