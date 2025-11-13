@@ -9,9 +9,84 @@ import google_linux_sql from "../assets/certifications/google-linux-sql.png"
 import google_assets from "../assets/certifications/google-assets.png"
 import google_detection from "../assets/certifications/google-detection.png"
 import google_python from "../assets/certifications/google-python.png"
+import datacamp_regex from "../assets/certifications/datacamp-regex.png"
 
 const certificationsData = {
   "certifications": [
+    {
+      "id": 2,
+      "title": "HackerRank Problem Solving (Basic) Certificate",
+      "organization": "HackerRank",
+      "issueDate": "2025-01-15",
+      "expiryDate": null,
+      "credentialId": "F65A6AE72B1F",
+      "credentialURL": "https://www.hackerrank.com/certificates/f65a6ae72b1f",
+      "image": hackerrank_problem_solving,
+      "description": "It covers basic topics of Data Structures (such as Arrays, Strings) and Algorithms (such as Sorting and Searching).",
+      "skills": [
+        "Problem Solving",
+        "Data Structures",
+        "Algorithms",
+        "Sorting",
+        "Searching"
+      ],
+      "subcourses": []
+    },
+    {
+      "id": 3,
+      "title": "Java (Basic) Certificate",
+      "organization": "HackerRank",
+      "issueDate": "2024-07-14",
+      "expiryDate": "",
+      "credentialId": "F915BBDCC5C1",
+      "credentialURL": "https://www.hackerrank.com/certificates/f915bbdcc5c1",
+      "image": hackerrank_java,
+      "description": "It covers basic topics in Java language such as classes, data structures, inheritance, exception handling, etc. You are expected to be proficient in either Java 7 or Java 8.",
+      "skills": [
+        "Java",
+        "Object-Oriented Programming",
+        "Data Structures",
+        "Exception Handling",
+        "Inheritance"
+      ],
+      "subcourses": []
+    },
+    {
+      "id": 4,
+      "title": "Python (Basic) Certificate",
+      "organization": "HackerRank",
+      "issueDate": "2024-01-30",
+      "expiryDate": "",
+      "credentialId": "E4DF4974AA3D",
+      "credentialURL": "https://www.hackerrank.com/certificates/e4df4974aa3d",
+      "image": hackerrank_python,
+      "description": "It covers topics like Scalar Types, Operators and Control Flow, Strings, Collections and Iteration, Modularity, Objects and Types and Classes",
+      "skills": [
+        "Python",
+        "Control Flow",
+        "Collections",
+        "Object-Oriented Programming",
+        "Modularity"
+      ],
+      "subcourses": []
+    },
+    {
+      "id": 4,
+      "title": "Regular Expressions in Python",
+      "organization": "DataCamp",
+      "issueDate": "2025-08-30",
+      "expiryDate": "",
+      "credentialId": "e71e8f8c2311d2690def1b86ecf0d019008bfeea",
+      "credentialURL": "https://www.datacamp.com/completed/statement-of-accomplishment/course/e71e8f8c2311d2690def1b86ecf0d019008bfeea",
+      "image": datacamp_regex,
+      "description": "As a data scientist, you will encounter many situations where you will need to extract key information from huge corpora of text, clean messy data containing strings, or detect and match patterns to find useful words. All of these situations are part of text mining and are an important step before applying machine learning algorithms. This course will take you through understanding compelling concepts about string manipulation and regular expressions. You will learn how to split strings, join them back together, interpolate them, as well as detect, extract, replace, and match strings using regular expressions. On the journey to master these skills, you will work with datasets containing movie reviews or streamed tweets that can be used to determine opinion, as well as with raw text scraped from the web.",
+      "skills": [
+        "Python",
+        "Regular Expressions",
+        "String Manipulation"
+      ],
+      "subcourses": []
+    },
     {
       "id": 1,
       "title": "Google Cybersecurity Professional Certificate",
@@ -95,63 +170,6 @@ const certificationsData = {
           "description": "Capstone course preparing for cybersecurity job search and career development."
         }
       ]
-    },
-    {
-      "id": 2,
-      "title": "HackerRank Problem Solving (Basic) Certificate",
-      "organization": "HackerRank",
-      "issueDate": "2025-01-15",
-      "expiryDate": null,
-      "credentialId": "F65A6AE72B1F",
-      "credentialURL": "https://www.hackerrank.com/certificates/f65a6ae72b1f",
-      "image": hackerrank_problem_solving,
-      "description": "It covers basic topics of Data Structures (such as Arrays, Strings) and Algorithms (such as Sorting and Searching).",
-      "skills": [
-        "Problem Solving",
-        "Data Structures",
-        "Algorithms",
-        "Sorting",
-        "Searching"
-      ],
-      "subcourses": []
-    },
-    {
-      "id": 3,
-      "title": "Java (Basic) Certificate",
-      "organization": "HackerRank",
-      "issueDate": "2024-07-14",
-      "expiryDate": "",
-      "credentialId": "F915BBDCC5C1",
-      "credentialURL": "https://www.hackerrank.com/certificates/f915bbdcc5c1",
-      "image": hackerrank_java,
-      "description": "It covers basic topics in Java language such as classes, data structures, inheritance, exception handling, etc. You are expected to be proficient in either Java 7 or Java 8.",
-      "skills": [
-        "Java",
-        "Object-Oriented Programming",
-        "Data Structures",
-        "Exception Handling",
-        "Inheritance"
-      ],
-      "subcourses": []
-    },
-    {
-      "id": 4,
-      "title": "Python (Basic) Certificate",
-      "organization": "HackerRank",
-      "issueDate": "2024-01-30",
-      "expiryDate": "",
-      "credentialId": "E4DF4974AA3D",
-      "credentialURL": "https://www.hackerrank.com/certificates/e4df4974aa3d",
-      "image": hackerrank_python,
-      "description": "It covers topics like Scalar Types, Operators and Control Flow, Strings, Collections and Iteration, Modularity, Objects and Types and Classes",
-      "skills": [
-        "Python",
-        "Control Flow",
-        "Collections",
-        "Object-Oriented Programming",
-        "Modularity"
-      ],
-      "subcourses": []
     },
     {
       "id": 5,
